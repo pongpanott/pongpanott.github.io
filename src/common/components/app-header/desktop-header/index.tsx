@@ -1,10 +1,12 @@
 import BaseButton from '../../buttons/base-button';
 import OutlinedButton from '../../buttons/outlined-button';
+import MainIcon from '../../main-icon';
 
 const DesktopHeader = () => {
     return (
-        <div>
-            <div className="flex gap-x-4 self-end">
+        <div className="flex w-full items-center justify-between">
+            <MainIcon />
+            <div className="hidden gap-x-4 lg:flex">
                 <BaseButton onClick={() => null}>About</BaseButton>
                 <BaseButton onClick={() => null}>Experience</BaseButton>
                 <BaseButton onClick={() => null}>Work</BaseButton>

@@ -1,7 +1,12 @@
-import AppLayout from './common/components/layout';
+import { HashRouter } from 'react-router-dom';
+import AppRouter from './router';
 
 function App() {
-    return <AppLayout>hello world</AppLayout>;
+    return (
+        <HashRouter>
+            <AppRouter />
+        </HashRouter>
+    );
 }
 
 export default App;

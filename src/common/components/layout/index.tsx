@@ -6,7 +6,7 @@ type AppLayoutProps = {
 
 const AppLayout = ({ children }: AppLayoutProps) => {
     return (
-        <div className="bg-red-100 font-nunito">
+        <div className="bg-[#f0e7db] font-nunito">
             <AppHeader />
             {children}
         </div>

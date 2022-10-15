@@ -17,8 +17,9 @@ const BaseButton = ({ className, type, onClick, children, icon }: BaseButtonProp
             onClick={onClick}
             className={cx(
                 className,
-                'flex h-9 items-center justify-center px-2 md:h-[44px] lg:h-[52px]',
-                'rounded-lg text-sm md:text-base lg:text-lg'
+                'flex h-9 items-center justify-center px-4 md:h-[44px] lg:h-[52px]',
+                'rounded-lg text-sm font-semibold hover:bg-primary-100 md:text-base lg:text-lg',
+                'transition-colors duration-300'
             )}
         >
             {ButtonIcon(icon)} {children}
