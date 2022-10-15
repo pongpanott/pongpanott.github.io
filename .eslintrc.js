@@ -23,5 +23,6 @@ module.exports = {
     rules: {
         'no-var': 'warn',
         quotes: ['warn', 'single'],
+        'react/react-in-jsx-scope': 'off',
     },
 };
