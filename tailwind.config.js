@@ -10,6 +10,11 @@ module.exports = {
             fontFamily: {
                 sans: ['var(--font-apercu)', ...fontFamily.sans],
             },
+            colors: {
+                dark: '#C9D1D9',
+                light: '#24292F',
+                'bg-dark': '#01040A',
+            },
         },
     },
     plugins: [],
