@@ -1,0 +1,5 @@
+{
+    "hero_hello": "Hello stranger!",
+    "hero_my_name": "I'm <span>{{name}}</span> <br /> I build things for the web.",
+    "hero_get_in_touch": "get in touch"
+}

@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import localFont from '@next/font/local';
 import DarkModeToggleButton from '../modules/theme/dark-mode-toggle-button';
+import '../common/locale/i18n';
 
 const apercu = localFont({
     src: [

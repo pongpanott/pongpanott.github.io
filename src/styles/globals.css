@@ -10,7 +10,7 @@ body {
 }
 
 .mode-tog {
-    background-color: black;
+    background-color: #01040a;
     position: fixed;
     right: 50px;
     top: 50px;
@@ -43,10 +43,10 @@ body {
     flex: 0 0 auto;
     top: 0;
     left: 0;
-    width: 250vw;
-    height: 250vw;
+    width: 450vw;
+    height: 450vw;
     transition: 1000ms;
-    background-color: black;
+    background-color: #01040a;
     transform: scale(0);
     border-radius: 50%;
 }
