@@ -1,35 +1,34 @@
-import { useTransition } from 'react';
-import Text from '../../../../common/base-ui/text';
-import { useTranslation } from 'react-i18next';
+import CircleButton from 'common/base-ui/buttons/circle-button';
+import Icon from 'common/base-ui/icon';
+import HeaderText from 'common/base-ui/text/header-text';
+import { useMediaSize } from 'common/hooks/media-size';
+import { AppIconEnum } from 'common/base-ui/icon/viewmodel';
+import { HomePageStaticText } from 'common/constants/static-text/home';
+import HeroSectionFooter from './hero-section-footer';
 import { css, cx } from '@emotion/css';
 
 const HeroSection = () => {
-    const { t } = useTranslation();
+    const { isMobile } = useMediaSize();
 
     return (
-        <div className="flex h-screen md:px-[100px] md:py-[120px] flex-col px-[50px] py-[70px]">
-            <Text className="text-[28px] lg:text-[36px] lg:leading-[48px] text-light md:text-[32px] md:leading-[48px] leading-8">
-                {t('hero_hello')}
-            </Text>
-
-            <Text className="my-auto max-w-[700px] lg:text-[48px] lg:leading-[64px] font-light md:text-[40px] md:leading-[52px] text-[36px] leading-[48px] tracking-[0.1px]">
-                <span
-                    className={cx(css`
-                        span {
-                            font-weight: 700;
-                        }
-                    `)}
-                    dangerouslySetInnerHTML={{
-                        __html: t('hero_my_name', { name: 'Pongpanot Tunkrongsin' }),
-                    }}
+        <div className="flex flex-col flex-1 mt-[58px] text-center items-center justify-center">
+            <div className="my-auto">
+                <HeaderText
+                    message={HomePageStaticText.heroTitle}
+                    fontSize={isMobile ? 'base' : 'lg'}
+                    className="mb-[18px] sm:mb-6"
                 />
-            </Text>
-            <Text className="tracking-[0.1px] leading-5 md:text-lg md:leading-6">
-                <span>{t('hero_get_in_touch')}</span>
-                <a href="mailto:plurm.pongpanot@gmail.com" className="underline">
-                    {` plurm.pongpanot@gmail.com`}
-                </a>
-            </Text>
+
+                <p className="text-sm sm:text-base max-w-[463px] w-full mx-auto">
+                    {HomePageStaticText.heroMessage}
+                </p>
+
+                <CircleButton className="mt-8 sm:mt-16 mx-auto">
+                    <Icon icon={AppIconEnum.ARROW_DOWN} scale={isMobile ? '1' : '1.5'} />
+                </CircleButton>
+            </div>
+
+            <HeroSectionFooter />
         </div>
     );
 };
