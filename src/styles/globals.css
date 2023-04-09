@@ -1,56 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html,
 body {
-    font-weight: 300;
-    height: 100vh;
-    width: 100vw;
+    @apply bg-snow text-shade-100 font-gotu;
 }
 
-.mode-tog {
-    background-color: #01040a;
-    position: fixed;
-    right: 50px;
-    top: 50px;
-    width: 20px;
-    height: 20px;
-    z-index: 100;
-    transition: 1000ms;
-    border-radius: 50%;
-    cursor: pointer;
+.spacing-minus-two-perc {
+    letter-spacing: -0.02em;
 }
 
-.mode-tog.active {
-    background-color: white;
-}
-
-.container {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 50px;
-    top: 50px;
-    width: 20px;
-    height: 20px;
-}
-
-.dark-mode {
-    position: relative;
-    display: flex;
-    flex: 0 0 auto;
-    top: 0;
-    left: 0;
-    width: 450vw;
-    height: 450vw;
-    transition: 1000ms;
-    background-color: #01040a;
-    transform: scale(0);
-    border-radius: 50%;
-}
-
-.dark-mode.active {
-    transform: scale(1);
+::selection {
+    @apply bg-primary;
 }
