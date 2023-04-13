@@ -9,7 +9,7 @@ const NavbarItem = ({ label, onClick }: { label: string; onClick: () => void }) 
 
 const NevbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => {
     return (
-        <div className="flex flex-col items-end gap-y-6 sm:gap-x-8 sm:flex-row">
+        <div className="flex flex-col items-end gap-y-6 md:gap-x-8 md:flex-row">
             <NavbarItem
                 label="work."
                 onClick={() => {

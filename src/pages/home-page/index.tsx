@@ -1,10 +1,12 @@
 import AppLayout from '../../common/base-ui/layout';
-import HeroSection from './section/hero-section';
+import HeroContainer from './section/hero-container';
+import MeContainer from './section/me-container';
 
 const HomePage = () => {
     return (
         <AppLayout>
-            <HeroSection />
+            <HeroContainer />
+            <MeContainer />
         </AppLayout>
     );
 };

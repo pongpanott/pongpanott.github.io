@@ -14,7 +14,7 @@ const HeroSectionFooter = () => {
                 {defaultValue.email}
             </a>
 
-            <div className="flex items-center gap-x-[10px] sm:gap-x-4">
+            <div className="flex items-center gap-x-[10px] md:gap-x-4">
                 <Link
                     href={defaultValue.github as string}
                     target="_blank"

@@ -21,6 +21,8 @@ const Icon = ({ className, icon, iconSize }: IconProps) => {
                     svg {
                         width: ${iconSize || defaultIconSize}px;
                         height: auto;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                 `
             )}
