@@ -1,6 +1,6 @@
 import React from 'react';
-import Signature from './signature';
-import { navbarItems } from '@/common/constants/navbar-items';
+import Signature from './components/signature';
+import NavbarItems from './components/navbar-items';
 
 const TabletNavbar = () => {
     return (
@@ -8,13 +8,7 @@ const TabletNavbar = () => {
             <div className="w-full max-w-[940px] mx-auto flex justify-between items-center">
                 <Signature />
 
-                <div className="flex items-center gap-x-8">
-                    {navbarItems.map((item) => (
-                        <button key={item.label} className="text-lg spacing-minus-two-perc">
-                            {item.label}
-                        </button>
-                    ))}
-                </div>
+                <NavbarItems setIsOpen={() => false} />
             </div>
         </nav>
     );
