@@ -6,6 +6,7 @@ export enum AppIconEnum {
     GITHUB = 'github',
     LINKEDIN = 'linkedin',
     CLOSE = 'close',
+    PORTRAIT = 'portrait',
 }
 
 export const appIconMapping: Record<string, React.ReactNode> = {
@@ -14,4 +15,5 @@ export const appIconMapping: Record<string, React.ReactNode> = {
     [AppIconEnum.GITHUB]: <AppIcon.Github />,
     [AppIconEnum.LINKEDIN]: <AppIcon.LinkedIn />,
     [AppIconEnum.CLOSE]: <AppIcon.Close />,
+    [AppIconEnum.PORTRAIT]: <AppIcon.Portrait />,
 };
