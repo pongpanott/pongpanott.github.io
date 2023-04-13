@@ -24,7 +24,7 @@ const HeroSection = () => {
                 </p>
 
                 <CircleButton className="mt-8 sm:mt-16 mx-auto">
-                    <Icon icon={AppIconEnum.ARROW_DOWN} scale={isMobile ? '1' : '1.5'} />
+                    <Icon icon={AppIconEnum.ARROW_DOWN} iconSize={isMobile ? 16 : 24} />
                 </CircleButton>
             </div>
 
