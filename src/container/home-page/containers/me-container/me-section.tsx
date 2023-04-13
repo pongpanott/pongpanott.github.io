@@ -1,9 +1,9 @@
-import Icon from '@/common/base-ui/icon';
+import Icon from 'common/base-ui/icon';
 import { useMediaSize } from 'common/hooks/media-size';
 import { css, cx } from '@emotion/css';
 import { AppIconEnum } from 'common/base-ui/icon/viewmodel';
 import HeaderText from 'common/base-ui/text/header-text';
-import { meStaticText } from '@/common/constants/static-text/me';
+import { meStaticText } from 'common/constants/static-text/me';
 
 const MeSection = () => {
     const { isMobile, isTablet, isDesktop } = useMediaSize();

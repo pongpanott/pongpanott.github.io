@@ -1,10 +1,19 @@
-import { defaultValue } from '@/common/constants/default';
+import { defaultValue } from 'common/constants/default';
+import Link from 'next/link';
 import React from 'react';
 
-const NavbarItem = ({ label, onClick }: { label: string; onClick: () => void }) => (
-    <button className="text-lg spacing-minus-two-perc" onClick={onClick}>
+const NavbarItem = ({
+    label,
+    onClick,
+    href,
+}: {
+    label: string;
+    onClick: () => void;
+    href: string;
+}) => (
+    <Link href={href} onClick={onClick} className="text-lg spacing-minus-two-perc">
         {label}
-    </button>
+    </Link>
 );
 
 const NevbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => {
@@ -15,19 +24,21 @@ const NevbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => 
                 onClick={() => {
                     setIsOpen(false);
                 }}
+                href="#work"
             />
             <NavbarItem
                 label="me."
                 onClick={() => {
                     setIsOpen(false);
                 }}
+                href="#me"
             />
             <NavbarItem
                 label="get in touch."
                 onClick={() => {
-                    location.href = `mailto:${defaultValue.email}`;
                     setIsOpen(false);
                 }}
+                href={`mailto:${defaultValue.email}`}
             />
         </div>
     );

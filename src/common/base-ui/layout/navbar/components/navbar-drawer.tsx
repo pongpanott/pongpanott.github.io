@@ -1,7 +1,5 @@
-import { BaseComponentProps } from '@/common/types/base-component';
 import React from 'react';
 import Drawer from '../../../drawer';
-import { navbarItems } from '@/common/constants/navbar-items';
 import { AppIconEnum } from '../../../icon/viewmodel';
 import Icon from '../../../icon';
 import NavbarItems from './navbar-items';

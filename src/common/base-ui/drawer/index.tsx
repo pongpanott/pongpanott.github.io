@@ -1,4 +1,4 @@
-import { BaseComponentProps } from '@/common/types/base-component';
+import { BaseComponentProps } from 'common/types/base-component';
 import { css, cx } from '@emotion/css';
 import React from 'react';
 

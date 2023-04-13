@@ -1,9 +1,9 @@
-import { BaseComponentProps } from '@/common/types/base-component';
+import { BaseComponentProps } from 'common/types/base-component';
 import { cx } from '@emotion/css';
 
 type HeaderTextProps = BaseComponentProps & {
     message: string;
-    fontSize?: 30 | 36 | 40 | 48 | 52 | 66 | 'base' | 'lg' | 'xl';
+    fontSize?: 30 | 36 | 40 | 48 | 52 | 66;
 };
 
 const fontSizeMapping: Record<string, string> = {
@@ -13,11 +13,9 @@ const fontSizeMapping: Record<string, string> = {
     48: 'text-[48px] leading-[53px]',
     52: 'text-[52px] leading-[58px]',
     66: 'text-[66px] leading-[73px]',
-    base: 'text-[48px] leading-[53px]',
-    xl: 'text-[66px] leading-[73px]',
 };
 
-const HeaderText = ({ className, message, fontSize = 'base' }: HeaderTextProps) => {
+const HeaderText = ({ className, message, fontSize = 48 }: HeaderTextProps) => {
     return (
         <p className={cx(className, 'font-quattrocento', fontSizeMapping[fontSize])}>{message}</p>
     );

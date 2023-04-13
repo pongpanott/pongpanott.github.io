@@ -1,9 +1,15 @@
+import { MutableRefObject } from 'react';
 import Navbar from './navbar';
 
-const AppLayout = ({ children }: { children: React.ReactNode }) => {
+type AppLayoutProps = {
+    children: React.ReactNode;
+    heroRef: MutableRefObject<HTMLDivElement | null>;
+};
+
+const AppLayout = ({ children, heroRef }: AppLayoutProps) => {
     return (
         <div className="flex flex-col h-full min-h-screen">
-            <Navbar />
+            <Navbar heroRef={heroRef} />
             <div className="flex flex-col mx-auto w-full max-w-[940px] flex-1">{children}</div>
         </div>
     );

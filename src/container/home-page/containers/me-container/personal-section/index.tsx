@@ -1,6 +1,6 @@
 import React from 'react';
 import PersonalContent from './personal-content';
-import { meStaticText } from '@/common/constants/static-text/me';
+import { meStaticText } from 'common/constants/static-text/me';
 
 const PersonalSection = () => {
     return (
