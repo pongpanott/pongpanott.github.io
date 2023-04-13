@@ -1,23 +1,28 @@
 import { css, cx } from '@emotion/css';
 import { AppIconEnum, appIconMapping } from './viewmodel';
 import { BaseComponentProps } from '../../types/base-component';
+import { useMediaSize } from 'common/hooks/media-size';
 
 type IconProps = BaseComponentProps & {
     icon: AppIconEnum;
     iconSize?: number;
-    scale?: string;
 };
 
-const Icon = ({ className, icon, iconSize, scale }: IconProps) => {
+const Icon = ({ className, icon, iconSize }: IconProps) => {
+    const { isMobile } = useMediaSize();
+
+    const defaultIconSize = isMobile ? 20 : 24;
+
     return (
         <i
             className={cx(
                 className,
                 css`
                     svg {
-                        width: ${iconSize}px;
-                        height: auto || ${iconSize}px;
-                        scale: ${scale || '1'};
+                        width: ${iconSize || defaultIconSize}px;
+                        height: auto;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                 `
             )}

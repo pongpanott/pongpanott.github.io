@@ -1,45 +1,45 @@
 {
-	"name": "pongpanott.github.io",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"@emotion/css": "11.10.6",
-		"@next/font": "13.1.6",
-		"@types/node": "18.14.0",
-		"@types/react": "18.0.28",
-		"@types/react-dom": "18.0.11",
-		"eslint": "8.34.0",
-		"eslint-config-next": "13.1.6",
-		"i18next": "22.4.10",
-		"next": "13.1.6",
-		"prettier": "2.8.4",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"react-i18next": "12.2.0",
-		"react-use": "17.4.0",
-		"typescript": "4.9.5"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "17.4.4",
-		"@commitlint/config-conventional": "17.4.4",
-		"@svgr/webpack": "7.0.0",
-		"autoprefixer": "10.4.13",
-		"husky": "8.0.3",
-		"lint-staged": "13.1.2",
-		"postcss": "8.4.21",
-		"tailwindcss": "3.2.7"
-	},
-	"lint-staged": {
-		"./src/**/*.{js,jsx,ts,tsx}": [
-			"eslint --fix",
-			"prettier --write",
-			"git add ."
-		]
-	}
+    "name": "pongpanott.github.io",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@emotion/css": "11.10.6",
+        "@next/font": "13.1.6",
+        "@types/node": "18.14.0",
+        "@types/react": "18.0.28",
+        "@types/react-dom": "18.0.11",
+        "eslint": "8.34.0",
+        "eslint-config-next": "13.1.6",
+        "i18next": "22.4.10",
+        "next": "13.1.6",
+        "prettier": "2.8.4",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-i18next": "12.2.0",
+        "react-use": "17.4.0",
+        "typescript": "4.9.5"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "17.4.4",
+        "@commitlint/config-conventional": "17.4.4",
+        "@svgr/webpack": "7.0.0",
+        "autoprefixer": "10.4.13",
+        "husky": "8.0.3",
+        "lint-staged": "13.1.2",
+        "postcss": "8.4.21",
+        "tailwindcss": "3.2.7"
+    },
+    "lint-staged": {
+        "./src/**/*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "prettier --write",
+            "git add ."
+        ]
+    }
 }

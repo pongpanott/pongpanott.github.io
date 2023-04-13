@@ -1,20 +1,17 @@
-import React from 'react';
-import Signature from './signature';
-import { navbarItems } from '@/common/constants/navbar-items';
+import React, { MutableRefObject } from 'react';
+import Signature from './components/signature';
+import NavbarItems from './components/navbar-items';
+import { useWebScroller } from '../../../hooks/web-scroller';
 
-const TabletNavbar = () => {
+const TabletNavbar = ({ heroRef }: { heroRef: MutableRefObject<HTMLDivElement | null> }) => {
+    const { handleWebScroll } = useWebScroller();
+
     return (
-        <nav className="fixed w-full top-0 left-0 px-8 py-4">
+        <nav className="fixed bg-snow w-full top-0 left-0 px-8 py-4 hidden md:block">
             <div className="w-full max-w-[940px] mx-auto flex justify-between items-center">
-                <Signature />
+                <Signature onClick={() => handleWebScroll(heroRef)} />
 
-                <div className="flex items-center gap-x-8">
-                    {navbarItems.map((item) => (
-                        <button key={item.label} className="text-lg spacing-minus-two-perc">
-                            {item.label}
-                        </button>
-                    ))}
-                </div>
+                <NavbarItems setIsOpen={() => false} />
             </div>
         </nav>
     );

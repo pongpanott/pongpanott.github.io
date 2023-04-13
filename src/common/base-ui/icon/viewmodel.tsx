@@ -3,13 +3,17 @@ import * as AppIcon from './icons';
 export enum AppIconEnum {
     HAMBURGER = 'hamburger',
     ARROW_DOWN = 'arrow-down',
-    INSTAGRAM = 'instafram',
+    GITHUB = 'github',
     LINKEDIN = 'linkedin',
+    CLOSE = 'close',
+    PORTRAIT = 'portrait',
 }
 
 export const appIconMapping: Record<string, React.ReactNode> = {
     [AppIconEnum.HAMBURGER]: <AppIcon.Hamburger />,
     [AppIconEnum.ARROW_DOWN]: <AppIcon.ArrowDown />,
-    [AppIconEnum.INSTAGRAM]: <AppIcon.Instagram />,
+    [AppIconEnum.GITHUB]: <AppIcon.Github />,
     [AppIconEnum.LINKEDIN]: <AppIcon.LinkedIn />,
+    [AppIconEnum.CLOSE]: <AppIcon.Close />,
+    [AppIconEnum.PORTRAIT]: <AppIcon.Portrait />,
 };

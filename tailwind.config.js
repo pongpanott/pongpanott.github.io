@@ -1,5 +1,5 @@
 module.exports = {
-    content: ['./src/**/*.{ts,tsx}'],
+    content: ['./src/**/*.{ts,tsx,svg}'],
     darkMode: ['class'],
     theme: {
         extend: {
@@ -8,10 +8,11 @@ module.exports = {
                 quattrocento: 'Quattrocento',
             },
             fontSize: {
+                '2xs': ['10px', '17px'],
                 xs: ['12px', '20px'],
                 sm: ['14px', '23px'],
-                base: ['16px', '23px'],
-                lg: ['18px', '26px'],
+                base: ['16px', '27px'],
+                lg: ['18px', '30px'],
                 '2xl': '1.563rem',
                 '3xl': '1.953rem',
                 '4xl': '2.441rem',
