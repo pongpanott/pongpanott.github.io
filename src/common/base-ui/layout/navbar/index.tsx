@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { MutableRefObject } from 'react';
 import MobileNavbar from './mobile-navbar';
-import { useMediaSize } from '@/common/hooks/media-size';
 import TabletNavbar from './tablet-navbat';
 
-const Navbar = () => {
-    const { isMobile } = useMediaSize();
-
-    return isMobile ? <MobileNavbar /> : <TabletNavbar />;
+const Navbar = ({ heroRef }: { heroRef: MutableRefObject<HTMLDivElement | null> }) => {
+    return (
+        <>
+            <MobileNavbar heroRef={heroRef} />
+            <TabletNavbar heroRef={heroRef} />;
+        </>
+    );
 };
 
 export default Navbar;

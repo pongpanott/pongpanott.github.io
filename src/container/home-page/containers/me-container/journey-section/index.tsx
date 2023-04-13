@@ -16,8 +16,7 @@ const JourneySection = () => {
             />
 
             <MobileJourney />
-
-            {/* {isMobile ?  : <TabletJourney />} */}
+            <TabletJourney />
         </div>
     );
 };
