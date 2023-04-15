@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -35,4 +36,22 @@ li:before {
     vertical-align: middle;
     line-height: 20px;
     @apply text-shade-100 text-[20px] px-2;
+}
+
+@media (min-width: 1280px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .hide-tablet {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none;
+    }
 }

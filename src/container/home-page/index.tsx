@@ -9,11 +9,13 @@ const HomePage = () => {
     const { heroRef, meRef, workRef } = useViewModel();
 
     return (
-        <AppLayout heroRef={heroRef}>
-            <HeroContainer heroRef={heroRef} meRef={meRef} />
-            <MeContainer meRef={meRef} />
+        <>
+            <AppLayout heroRef={heroRef}>
+                <HeroContainer heroRef={heroRef} meRef={meRef} />
+                <MeContainer meRef={meRef} />
+            </AppLayout>
             <WorkContainer workRef={workRef} />
-        </AppLayout>
+        </>
     );
 };
 
