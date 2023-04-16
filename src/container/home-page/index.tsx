@@ -13,8 +13,8 @@ const HomePage = () => {
             <AppLayout heroRef={heroRef}>
                 <HeroContainer heroRef={heroRef} meRef={meRef} />
                 <MeContainer meRef={meRef} />
+                <WorkContainer workRef={workRef} />
             </AppLayout>
-            <WorkContainer workRef={workRef} />
         </>
     );
 };

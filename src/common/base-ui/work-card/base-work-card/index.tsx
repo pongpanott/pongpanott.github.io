@@ -23,6 +23,7 @@ export type BaseWorkCardProps = BaseComponentProps & {
     tabletBackground?: string;
     desktopBackground?: string;
     levitateAppImage?: React.ReactNode;
+    siteUrl: string;
 };
 
 const BaseWorkCard = (props: BaseWorkCardProps) => {
