@@ -6,6 +6,7 @@ module.exports = {
             fontFamily: {
                 gotu: 'Gotu',
                 quattrocento: 'Quattrocento',
+                poppins: 'Poppins',
             },
             fontSize: {
                 '2xs': ['10px', '17px'],
