@@ -21,7 +21,7 @@ const HeroContainer = ({ heroRef, meRef }: HeroContainerProps) => {
     return (
         <div
             ref={heroRef}
-            className="flex flex-col px-[18px] pb-6 md:p-8 md:pt-0 h-screen mt-[58px] text-center items-center justify-center"
+            className="flex flex-col xl:px-0 w-full max-w-[940px] mx-auto px-[18px] pb-6 md:p-8 md:pt-0 h-screen mt-[58px] text-center items-center justify-center"
         >
             <div className="my-auto">
                 <HeaderText

@@ -2,13 +2,14 @@ import BaseWorkCard from '../base-work-card';
 import MentalDeeDeeLogo from 'assets/icons/work/logo.svg';
 import app from 'assets/images/work/mental-dee-dee/app.png';
 import Image from 'next/image';
+import { workStaticText } from '../../../constants/static-text/work';
 
 const MentalDeeDeeCard = () => {
     return (
         <BaseWorkCard
-            themeColor="#FFB717"
-            title={`Psychology Online Class & \n Mental Health Assessment`}
-            description="Website shares mental health knowledge with the goal of healing oneself and others. It aims to provide all-around resources and information to improve mental well-being."
+            themeColor={workStaticText.workCard.mentalDeeDee.themeColor}
+            title={workStaticText.workCard.mentalDeeDee.title}
+            description={workStaticText.workCard.mentalDeeDee.description}
             icon={<MentalDeeDeeLogo />}
             appImage={
                 <div className="w-[252px] h-[262px] mx-auto relative ">
@@ -35,6 +36,7 @@ const MentalDeeDeeCard = () => {
                     />
                 </div>
             }
+            siteUrl={workStaticText.workCard.mentalDeeDee.siteUrl}
         />
     );
 };

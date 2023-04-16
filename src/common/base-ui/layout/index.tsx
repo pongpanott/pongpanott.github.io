@@ -10,7 +10,7 @@ const AppLayout = ({ children, heroRef }: AppLayoutProps) => {
     return (
         <div className="flex flex-col h-full min-h-screen">
             <Navbar heroRef={heroRef} />
-            <div className="flex flex-col mx-auto w-full max-w-[940px] flex-1">{children}</div>
+            <div className="flex flex-col w-full flex-1">{children}</div>
         </div>
     );
 };

@@ -6,6 +6,7 @@ import { AppIconEnum } from '../../../icon/viewmodel';
 
 type LeviatetWorkCardProps = BaseWorkCardProps & {
     onMouseLeave: () => void;
+    siteUrl: string;
 };
 
 const LevitateWorkCard = ({
@@ -16,12 +17,13 @@ const LevitateWorkCard = ({
     levitateAppImage,
     tabletBackground,
     onMouseLeave,
+    siteUrl,
 }: LeviatetWorkCardProps) => {
     return (
         <div
             onMouseLeave={onMouseLeave}
             className={cx(
-                'absolute hide-mobile hide-tablet top-0 left-0 w-screen h-[361px]',
+                'absolute hide-mobile hide-tablet top-0 z-[10] left-0 w-screen h-[361px]',
                 css`
                     background: ${tabletBackground};
                 `
@@ -48,7 +50,7 @@ const LevitateWorkCard = ({
                     />
                     <BaseWorkCard.Description description={description} className="text-sm" />
 
-                    <Link href="https://www.mentaldeedee.com/" passHref legacyBehavior>
+                    <Link href={siteUrl} passHref legacyBehavior>
                         <a
                             target="_blank"
                             rel="noopener"
