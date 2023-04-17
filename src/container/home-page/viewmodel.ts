@@ -16,7 +16,7 @@ export const useViewModel = () => {
             ? meRef
             : asPath.includes('#work')
             ? workRef
-            : heroRef;
+            : null;
 
         handleWebScroll(currentRef);
         // eslint-disable-next-line react-hooks/exhaustive-deps
