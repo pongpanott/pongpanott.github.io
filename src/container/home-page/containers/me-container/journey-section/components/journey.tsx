@@ -1,6 +1,7 @@
 import { JourneyModel } from 'common/types/journey';
 import { BaseComponentProps } from 'common/types/base-component';
 import Link from 'next/link';
+import { css, cx } from '@emotion/css';
 
 type JourneyProps = BaseComponentProps & {
     journey: JourneyModel;
@@ -28,7 +29,17 @@ const Journey = ({ className, journey }: JourneyProps) => {
                 {journey.description.map((item) => (
                     <li key={item} className="flex">
                         <span className="custom-bullet-point" />
-                        <span className="text-xs md:text-sm">{item}</span>
+                        <span
+                            dangerouslySetInnerHTML={{ __html: item }}
+                            className={cx(
+                                'text-xs md:text-sm',
+                                css`
+                                    a {
+                                        text-decoration: underline;
+                                    }
+                                `
+                            )}
+                        />
                     </li>
                 ))}
             </ul>
