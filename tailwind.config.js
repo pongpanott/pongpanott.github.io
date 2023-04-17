@@ -6,6 +6,7 @@ module.exports = {
             fontFamily: {
                 gotu: 'Gotu',
                 quattrocento: 'Quattrocento',
+                poppins: 'Poppins',
             },
             fontSize: {
                 '2xs': ['10px', '17px'],
@@ -13,7 +14,8 @@ module.exports = {
                 sm: ['14px', '23px'],
                 base: ['16px', '27px'],
                 lg: ['18px', '30px'],
-                '2xl': '1.563rem',
+                xl: ['20px', '33px'],
+                '2xl': ['22px', '37px'],
                 '3xl': '1.953rem',
                 '4xl': '2.441rem',
                 '5xl': '3.052rem',

@@ -7,7 +7,7 @@ const MeContainer = ({ meRef }: { meRef: MutableRefObject<HTMLDivElement | null>
     return (
         <div
             ref={meRef}
-            className="py-[80px] xl:px-0 md:px-8 md:py-[120px] xl:py-[150px] px-[18px] flex flex-col w-full md:gap-y-[150px] gap-y-[120px]"
+            className="py-[80px] max-w-[940px] mx-auto xl:px-0 md:px-8 md:py-[120px] xl:py-[150px] px-[18px] flex flex-col w-full md:gap-y-[150px] gap-y-[120px]"
         >
             <MeSection />
             <JourneySection />

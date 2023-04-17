@@ -1,4 +1,5 @@
 import { JourneyModel } from 'common/types/journey';
+import { defaultValue } from '../default';
 
 export const meStaticText = {
     meTitle: 'me? Always code.',
@@ -11,11 +12,11 @@ export const meStaticText = {
             link: 'https://20scoopscnx.com',
             date: 'January 2022 - present',
             description: [
-                'Develop modern website with performant and maintainable code for diverse of client based in Germany',
-                'Support a nuvo team to develop a user platform website',
-                'Part of an international team to develop a grocery deliveries website for Bringoo',
-                'Work with a variety of different frameworks, and content management systems such as React, Next.js, Tailwind CSS, and Netlify',
-                'Communicate with multi nationality engineers, designers, and clients on a daily work',
+                'Develop a modern website with performant and maintainable code for diverse clients based in Germany.',
+                `Support a <a href="${defaultValue.getnuvo}" target="_blank" rel="noreferrer noopener">nuvo</a> team to develop a user platform website.`,
+                `Part of an international team to develop a grocery deliveries website for <a href="${defaultValue.bringoo}" target="_blank" rel="noreferrer noopener">Bringoo</a>.`,
+                'Work with a variety of different frameworks, and content management systems such as React, Next.js, Tailwind CSS, and Netlify.',
+                'Communicate with multi-nationality engineers, designers, and clients on a daily work.',
             ],
         },
         {
@@ -24,9 +25,9 @@ export const meStaticText = {
             link: 'https://tecmove.net',
             date: 'June - December 2021',
             description: [
-                'Developed web-based Point of Sale (POS) application for Life Space, co-working space based in Chiang Mai using React and Material UI',
-                'Developed an internal project to connect with co-working space door access and thermal printer control',
-                'Working with a team of developers, designer, and tester to delivery a quality product',
+                `Developed web-based Point of Sale (POS) application for <a href="${defaultValue.lifeSpace}" target="_blank" rel="noreferrer noopener">Life Space</a>, a co-working space based in Chiang Mai using React and Material UI.`,
+                'Developed an internal project to connect with co-working space door access and thermal printer control.',
+                'Working with a team of developers, designers, and testers to deliver a quality product.',
             ],
         },
     ] as JourneyModel[],

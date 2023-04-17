@@ -4,3 +4,5 @@ export { default as Github } from 'assets/icons/github.svg';
 export { default as LinkedIn } from 'assets/icons/linkedin.svg';
 export { default as Close } from 'assets/icons/close.svg';
 export { default as Portrait } from 'assets/icons/portrait.svg';
+export { default as ArrowSingleRight } from 'assets/icons/arrow-single-right.svg';
+export { default as ArrowRight } from 'assets/icons/arrow-right.svg';

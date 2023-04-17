@@ -3,6 +3,7 @@ import Drawer from '../../../drawer';
 import { AppIconEnum } from '../../../icon/viewmodel';
 import Icon from '../../../icon';
 import NavbarItems from './navbar-items';
+import { useMediaSize } from '../../../../hooks/media-size';
 
 type NavbarDrawerProps = {
     isOpen: boolean;
@@ -10,7 +11,9 @@ type NavbarDrawerProps = {
 };
 
 const NavbarDrawer = ({ isOpen, setIsOpen }: NavbarDrawerProps) => {
-    return (
+    const { isMobile } = useMediaSize();
+
+    return isMobile ? (
         <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
             <div className="px-6 py-8 flex flex-col items-end">
                 <button className="mb-10" onClick={() => setIsOpen(false)}>
@@ -20,7 +23,7 @@ const NavbarDrawer = ({ isOpen, setIsOpen }: NavbarDrawerProps) => {
                 <NavbarItems setIsOpen={setIsOpen} />
             </div>
         </Drawer>
-    );
+    ) : null;
 };
 
 export default NavbarDrawer;
