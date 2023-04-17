@@ -9,7 +9,10 @@ const WorkContainer = ({ workRef }: { workRef: MutableRefObject<HTMLDivElement |
     const { isMobile, isTablet } = useMediaSize();
 
     return (
-        <div className="flex flex-col gap-y-[120px] md:gap-y-[150px] pb-[80px] md:pb-[120px] xl:pb-[150px]">
+        <div
+            ref={workRef}
+            className="flex flex-col gap-y-[120px] md:gap-y-[150px] pb-[80px] md:pb-[120px] xl:pb-[150px]"
+        >
             <div className="px-[18px] w-full max-w-[537px] md:px-0 mx-auto">
                 <HeaderText
                     message={workStaticText.workTitle}
@@ -19,7 +22,7 @@ const WorkContainer = ({ workRef }: { workRef: MutableRefObject<HTMLDivElement |
                 <p className="text-sm md:text-right md:text-base">{workStaticText.workMessage}</p>
             </div>
 
-            <div ref={workRef} className="relative">
+            <div className="relative">
                 <div className="flex flex-col md:gap-y-6 xl:grid-cols-2 gap-y-4 xl:w-[668px] xl:grid xl:mx-auto xl:gap-8">
                     <MentalDeeDeeCard />
                     <CommissionCard />
