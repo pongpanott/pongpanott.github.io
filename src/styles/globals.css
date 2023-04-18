@@ -37,21 +37,3 @@ li:before {
     line-height: 20px;
     @apply text-shade-100 text-[20px] px-2;
 }
-
-@media (min-width: 1280px) {
-    .hide-desktop {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1279px) {
-    .hide-tablet {
-        display: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .hide-mobile {
-        display: none;
-    }
-}

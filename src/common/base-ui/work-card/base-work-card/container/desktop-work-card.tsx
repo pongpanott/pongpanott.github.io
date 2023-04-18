@@ -2,16 +2,19 @@ import { css, cx } from '@emotion/css';
 import BaseWorkCard, { BaseWorkCardProps } from '..';
 import { useState } from 'react';
 import LevitateWorkCard from './levitate-card';
+import { useMediaSize } from 'common/hooks/media-size';
 
 const DesktopWorkCard = (props: BaseWorkCardProps) => {
     const [isHover, setIsHover] = useState(false);
 
-    return (
+    const { isDesktop } = useMediaSize();
+
+    return isDesktop ? (
         <>
             <div
                 onMouseEnter={() => setIsHover(true)}
                 className={cx(
-                    'hide-mobile hide-tablet px-8 pt-8 relative',
+                    'px-8 pt-8 relative',
                     css`
                         background: ${props.desktopBackground};
                     `
@@ -34,7 +37,7 @@ const DesktopWorkCard = (props: BaseWorkCardProps) => {
             </div>
             {isHover && <LevitateWorkCard onMouseLeave={() => setIsHover(false)} {...props} />}
         </>
-    );
+    ) : null;
 };
 
 export default DesktopWorkCard;
