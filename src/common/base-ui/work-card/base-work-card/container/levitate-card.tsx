@@ -3,6 +3,7 @@ import BaseWorkCard, { BaseWorkCardProps } from '..';
 import Link from 'next/link';
 import Icon from '../../../icon';
 import { AppIconEnum } from '../../../icon/viewmodel';
+import { useMediaSize } from 'common/hooks/media-size';
 
 type LeviatetWorkCardProps = BaseWorkCardProps & {
     onMouseLeave: () => void;
@@ -19,11 +20,13 @@ const LevitateWorkCard = ({
     onMouseLeave,
     siteUrl,
 }: LeviatetWorkCardProps) => {
-    return (
+    const { isDesktop } = useMediaSize();
+
+    return isDesktop ? (
         <div
             onMouseLeave={onMouseLeave}
             className={cx(
-                'absolute hide-mobile hide-tablet top-0 z-[10] left-0 w-screen h-[361px]',
+                'absolute top-0 z-[10] left-0 w-screen h-[361px]',
                 css`
                     background: ${tabletBackground};
                 `
@@ -65,7 +68,7 @@ const LevitateWorkCard = ({
                 <div className="flex flex-col justify-end">{levitateAppImage}</div>
             </BaseWorkCard.Body>
         </div>
-    );
+    ) : null;
 };
 
 export default LevitateWorkCard;
