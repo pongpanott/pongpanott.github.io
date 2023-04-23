@@ -1,41 +1,18 @@
 import { meStaticText } from 'common/constants/static-text/me';
-import React from 'react';
+import React, { useState } from 'react';
 import Journey from './journey';
 import Timeline from 'common/base-ui/timeline';
 import { useMediaSize } from 'common/hooks/media-size';
 
 const TabletJourney = () => {
+    const [activeJourney, setActiveJourney] = useState(0);
+
     const { isMobile } = useMediaSize();
 
     return !isMobile ? (
-        <div className="w-[648px] mx-auto md:flex justify-end gap-x-6 xl:gap-x-8">
-            {/* <Timeline /> */}
-            {/* TODO: implementjourney timeline */}
-            {/* <div className="bg-blue-200 w-[116px] h-[306px] overflow-y-auto">
-                <div
-                    className={cx(
-                        'flex gap-[50px]',
-                        css`
-                            scroll-snap-type: x mandatory;
-                            scroll-behavior: smooth;
-                        `
-                    )}
-                >
-                    {Array.from({ length: 100 }).map((_, index) => (
-                        <div
-                            key={index}
-                            className={cx(
-                                'w-[100px] flex-shrink-0 h-[100px] bg-red-300',
-                                css`
-                                    scroll-snap-align: start;
-                                `
-                            )}
-                        />
-                    ))}
-                </div>
-            </div> */}
-            <Journey journey={meStaticText.journey[0]} className="w-[435px]" />
-            <Journey journey={meStaticText.journey[1]} className="w-[435px]" />
+        <div className="h-[320px] md:justify-center mx-auto md:flex gap-x-8">
+            <Timeline activeJourney={activeJourney} setActiveJourney={setActiveJourney} />
+            <Journey journey={meStaticText.journey[activeJourney]} className="w-[475px]" />
         </div>
     ) : null;
 };

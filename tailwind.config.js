@@ -27,6 +27,10 @@ module.exports = {
                     0: 'white',
                     100: '#333333',
                 },
+                timeline: {
+                    node: '#D6D5D3',
+                    year: '#B1B1B1',
+                },
             },
         },
     },

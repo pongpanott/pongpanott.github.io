@@ -4,4 +4,6 @@ export type JourneyModel = {
     link: string;
     date: string;
     description: string[];
+    startDate: string;
+    endDate: string;
 };

@@ -37,3 +37,7 @@ li:before {
     line-height: 20px;
     @apply text-shade-100 text-[20px] px-2;
 }
+
+.timeline-element::-webkit-scrollbar {
+    display: none;
+}
