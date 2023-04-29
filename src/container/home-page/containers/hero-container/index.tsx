@@ -6,25 +6,19 @@ import { AppIconEnum } from 'common/base-ui/icon/viewmodel';
 import { HomePageStaticText } from 'common/constants/static-text/home';
 import HeroSectionFooter from './hero-section-footer';
 import { MutableRefObject } from 'react';
-import { useWebScroller } from '../../../../common/hooks/web-scroller';
+import { useWebScroller } from 'common/hooks/web-scroller';
 import ContainerWrapper from 'common/layout/container-wrapper';
 
 type HeroContainerProps = {
-    heroRef: MutableRefObject<HTMLDivElement | null>;
     meRef: MutableRefObject<HTMLDivElement | null>;
 };
 
-const HeroContainer = ({ heroRef, meRef }: HeroContainerProps) => {
+const HeroContainer = ({ meRef }: HeroContainerProps) => {
     const { isMobile } = useMediaSize();
     const { handleWebScroll } = useWebScroller();
 
     return (
-        <ContainerWrapper
-            containerRef={heroRef}
-            useMaxWidth
-            fixedHeightScreen
-            className="translate-y-[-62px] relative"
-        >
+        <ContainerWrapper useMaxWidth fixedHeightScreen className="translate-y-[-62px] relative">
             <div className="my-auto text-center">
                 <HeaderText
                     message={HomePageStaticText.heroTitle}

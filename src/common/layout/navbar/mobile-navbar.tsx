@@ -7,7 +7,7 @@ import Signature from './components/signature';
 import { useWebScroller } from 'common/hooks/web-scroller';
 import { useMediaSize } from '../../hooks/media-size';
 
-const MobileNavbar = ({ heroRef }: { heroRef: MutableRefObject<HTMLDivElement | null> }) => {
+const MobileNavbar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const { handleWebScroll } = useWebScroller();
@@ -15,7 +15,7 @@ const MobileNavbar = ({ heroRef }: { heroRef: MutableRefObject<HTMLDivElement | 
 
     return isMobile ? (
         <>
-            <Signature onClick={() => handleWebScroll(heroRef)} />
+            <Signature onClick={() => handleWebScroll()} />
             <button type="button" onClick={() => setIsDrawerOpen(true)}>
                 <Icon icon={AppIconEnum.HAMBURGER} iconSize={24} />
             </button>

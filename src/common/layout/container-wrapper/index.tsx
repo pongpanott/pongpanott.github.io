@@ -3,7 +3,7 @@ import { BaseComponentProps } from 'common/types/base-component';
 import { MutableRefObject } from 'react';
 
 type ContainerWrapperProps = BaseComponentProps & {
-    containerRef: MutableRefObject<HTMLDivElement | null>;
+    containerRef?: MutableRefObject<HTMLDivElement | null>;
     children: React.ReactNode;
     useMaxWidth?: boolean;
     fixedHeightScreen?: boolean;
