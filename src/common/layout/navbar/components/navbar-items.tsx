@@ -1,4 +1,5 @@
 import { defaultValue } from 'common/constants/default';
+import { HashRouteEnum } from 'common/types/hash-route';
 import Link from 'next/link';
 import React from 'react';
 
@@ -16,7 +17,7 @@ const NavbarItem = ({
     </Link>
 );
 
-const NevbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => {
+const NavbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => {
     return (
         <div className="flex flex-col items-end gap-y-6 md:gap-x-8 md:flex-row">
             <NavbarItem
@@ -24,14 +25,14 @@ const NevbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => 
                 onClick={() => {
                     setIsOpen(false);
                 }}
-                href="#work"
+                href={HashRouteEnum.WORK}
             />
             <NavbarItem
                 label="me."
                 onClick={() => {
                     setIsOpen(false);
                 }}
-                href="#me"
+                href={HashRouteEnum.ME}
             />
             <NavbarItem
                 label="get in touch."
@@ -44,4 +45,4 @@ const NevbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => 
     );
 };
 
-export default NevbarItems;
+export default NavbarItems;

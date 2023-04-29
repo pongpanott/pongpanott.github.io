@@ -4,13 +4,13 @@ import NavbarItems from './components/navbar-items';
 import { useWebScroller } from '../../hooks/web-scroller';
 import { useMediaSize } from '../../hooks/media-size';
 
-const TabletNavbar = ({ heroRef }: { heroRef: MutableRefObject<HTMLDivElement | null> }) => {
+const TabletNavbar = () => {
     const { handleWebScroll } = useWebScroller();
     const { isMobile } = useMediaSize();
 
     return !isMobile ? (
         <div className="w-full max-w-[940px] mx-auto flex justify-between items-center">
-            <Signature onClick={() => handleWebScroll(heroRef)} />
+            <Signature onClick={() => handleWebScroll()} />
 
             <NavbarItems setIsOpen={() => false} />
         </div>

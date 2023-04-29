@@ -1,26 +1,27 @@
 import { useWebScroller } from 'common/hooks/web-scroller';
+import { HashRouteEnum } from 'common/types/hash-route';
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 
 export const useViewModel = () => {
-    const heroRef = useRef<HTMLDivElement | null>(null);
     const meRef = useRef<HTMLDivElement | null>(null);
     const workRef = useRef<HTMLDivElement | null>(null);
 
     const { handleWebScroll } = useWebScroller();
-
-    const { asPath } = useRouter();
+    const router = useRouter();
 
     useEffect(() => {
-        const currentRef = asPath.includes('#me')
-            ? meRef
-            : asPath.includes('#work')
-            ? workRef
-            : null;
+        const hashName = window.location.hash;
 
-        handleWebScroll(currentRef);
+        handleWebScroll(
+            hashName.includes(HashRouteEnum.ME)
+                ? meRef
+                : hashName.includes(HashRouteEnum.WORK)
+                ? workRef
+                : null
+        );
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [asPath]);
+    }, [router]);
 
-    return { heroRef, meRef, workRef };
+    return { meRef, workRef };
 };
