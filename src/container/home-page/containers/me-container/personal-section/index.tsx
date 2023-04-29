@@ -8,7 +8,7 @@ const PersonalSection = () => {
     const { isMobile } = useMediaSize();
 
     return (
-        <div className="md:flex md:gap-x-8 md:justify-center xl:block">
+        <div className="md:flex w-full md:gap-x-8 md:justify-center xl:block">
             <div className="mb-6 md:text-left xl:mb-12 xl:text-left md:mb-0 md:w-[350px] md:h-[415px] md:grid md:place-items-center xl:w-fit xl:h-auto">
                 <HeaderText message={meStaticText.personalTitle} fontSize={isMobile ? 30 : 36} />
             </div>

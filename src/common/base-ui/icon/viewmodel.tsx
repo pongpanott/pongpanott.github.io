@@ -9,6 +9,7 @@ export enum AppIconEnum {
     PORTRAIT = 'portrait',
     ARROW_SINGLE_RIGHT = 'arrow-single-right',
     ARROW_RIGHT = 'arrow-right',
+    GMAIL = 'gamil',
 }
 
 export const appIconMapping: Record<string, React.ReactNode> = {
@@ -20,4 +21,5 @@ export const appIconMapping: Record<string, React.ReactNode> = {
     [AppIconEnum.PORTRAIT]: <AppIcon.Portrait />,
     [AppIconEnum.ARROW_SINGLE_RIGHT]: <AppIcon.ArrowSingleRight />,
     [AppIconEnum.ARROW_RIGHT]: <AppIcon.ArrowRight />,
+    [AppIconEnum.GMAIL]: <AppIcon.Gmail />,
 };
