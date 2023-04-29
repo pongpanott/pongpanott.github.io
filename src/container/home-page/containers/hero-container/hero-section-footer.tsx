@@ -1,28 +1,8 @@
-import Icon from 'common/base-ui/icon';
-import { AppIconEnum } from 'common/base-ui/icon/viewmodel';
-import { defaultValue } from 'common/constants/default';
-import Link from 'next/link';
+import ContactGroup from 'common/base-ui/contact-group';
 
 const HeroSectionFooter = () => {
     return (
-        <div className="flex w-full gap-x-2 items-center justify-between translate-y-[-62px]">
-            <a href={`mailto:${defaultValue.email}`} className="spacing-minus-two-perc text-xs">
-                {defaultValue.email}
-            </a>
-
-            <div className="flex items-center gap-x-[10px] md:gap-x-4">
-                <Link
-                    href={defaultValue.github as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Icon icon={AppIconEnum.GITHUB} />
-                </Link>
-                <Link href={defaultValue.in as string} target="_blank" rel="noopener noreferrer">
-                    <Icon icon={AppIconEnum.LINKEDIN} />
-                </Link>
-            </div>
-        </div>
+        <ContactGroup className="ml-auto absolute bottom-6 md:right-8 md:bottom-8 xl:right-0 xl:bottom-12 right-[18px]" />
     );
 };
 
