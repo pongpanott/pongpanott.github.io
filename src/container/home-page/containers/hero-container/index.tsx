@@ -19,7 +19,12 @@ const HeroContainer = ({ heroRef, meRef }: HeroContainerProps) => {
     const { handleWebScroll } = useWebScroller();
 
     return (
-        <ContainerWrapper containerRef={heroRef} useMaxWidth fixedHeightScreen>
+        <ContainerWrapper
+            containerRef={heroRef}
+            useMaxWidth
+            fixedHeightScreen
+            className="translate-y-[-62px] relative"
+        >
             <div className="my-auto text-center">
                 <HeaderText
                     message={HomePageStaticText.heroTitle}

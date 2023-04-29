@@ -12,7 +12,7 @@ const WorkContainer = ({ workRef }: { workRef: MutableRefObject<HTMLDivElement |
     return (
         <ContainerWrapper
             containerRef={workRef}
-            className="!px-0 !py-[120px] items-baseline md:!py-[150px] xl:!py-[200px] md:gap-y-[100px] gap-y-20"
+            className="!px-0 !pt-[120px] items-baseline md:!pt-[150px] !pb-20 md:!pb-[100px] xl:!py-[200px] md:gap-y-[100px] gap-y-20"
         >
             <div className="px-[18px] w-full max-w-[537px] md:px-0 mx-auto">
                 <HeaderText
