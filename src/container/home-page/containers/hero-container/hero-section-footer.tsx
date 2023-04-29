@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const HeroSectionFooter = () => {
     return (
-        <div className="flex w-full gap-x-2 items-center justify-between">
+        <div className="flex w-full gap-x-2 items-center justify-between translate-y-[-62px]">
             <a href={`mailto:${defaultValue.email}`} className="spacing-minus-two-perc text-xs">
                 {defaultValue.email}
             </a>
