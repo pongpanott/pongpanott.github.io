@@ -7,6 +7,7 @@ import { HomePageStaticText } from 'common/constants/static-text/home';
 import HeroSectionFooter from './hero-section-footer';
 import { MutableRefObject } from 'react';
 import { useWebScroller } from '../../../../common/hooks/web-scroller';
+import ContainerWrapper from 'common/layout/container-wrapper';
 
 type HeroContainerProps = {
     heroRef: MutableRefObject<HTMLDivElement | null>;
@@ -15,15 +16,11 @@ type HeroContainerProps = {
 
 const HeroContainer = ({ heroRef, meRef }: HeroContainerProps) => {
     const { isMobile } = useMediaSize();
-
     const { handleWebScroll } = useWebScroller();
 
     return (
-        <div
-            ref={heroRef}
-            className="flex flex-col xl:px-0 w-full max-w-[940px] mx-auto px-[18px] pb-6 md:p-8 md:pt-0 h-screen mt-[58px] text-center items-center justify-center"
-        >
-            <div className="my-auto">
+        <ContainerWrapper containerRef={heroRef} useMaxWidth fixedHeightScreen>
+            <div className="my-auto text-center">
                 <HeaderText
                     message={HomePageStaticText.heroTitle}
                     fontSize={isMobile ? 48 : 66}
@@ -43,7 +40,7 @@ const HeroContainer = ({ heroRef, meRef }: HeroContainerProps) => {
             </div>
 
             <HeroSectionFooter />
-        </div>
+        </ContainerWrapper>
     );
 };
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import Drawer from '../../../drawer';
-import { AppIconEnum } from '../../../icon/viewmodel';
-import Icon from '../../../icon';
+import Drawer from '../../../base-ui/drawer';
+import { AppIconEnum } from '../../../base-ui/icon/viewmodel';
+import Icon from '../../../base-ui/icon';
 import NavbarItems from './navbar-items';
-import { useMediaSize } from '../../../../hooks/media-size';
+import { useMediaSize } from '../../../hooks/media-size';
 
 type NavbarDrawerProps = {
     isOpen: boolean;
