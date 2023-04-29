@@ -15,14 +15,10 @@ const MobileNavbar = ({ heroRef }: { heroRef: MutableRefObject<HTMLDivElement | 
 
     return isMobile ? (
         <>
-            <nav className="sticky top-0 left-0 bg-snow w-full flex gap-x-2 px-[18px] py-4 justify-between items-center">
-                <Signature onClick={() => handleWebScroll(heroRef)} />
-
-                <button type="button" onClick={() => setIsDrawerOpen(true)}>
-                    <Icon icon={AppIconEnum.HAMBURGER} iconSize={24} />
-                </button>
-            </nav>
-
+            <Signature onClick={() => handleWebScroll(heroRef)} />
+            <button type="button" onClick={() => setIsDrawerOpen(true)}>
+                <Icon icon={AppIconEnum.HAMBURGER} iconSize={24} />
+            </button>
             <NavbarDrawer isOpen={isDrawerOpen} setIsOpen={setIsDrawerOpen} />
         </>
     ) : null;

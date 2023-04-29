@@ -9,13 +9,11 @@ const TabletNavbar = ({ heroRef }: { heroRef: MutableRefObject<HTMLDivElement | 
     const { isMobile } = useMediaSize();
 
     return !isMobile ? (
-        <nav className="sticky bg-snow w-full top-0 left-0 px-8 py-4 hidden md:block">
-            <div className="w-full max-w-[940px] mx-auto flex justify-between items-center">
-                <Signature onClick={() => handleWebScroll(heroRef)} />
+        <div className="w-full max-w-[940px] mx-auto flex justify-between items-center">
+            <Signature onClick={() => handleWebScroll(heroRef)} />
 
-                <NavbarItems setIsOpen={() => false} />
-            </div>
-        </nav>
+            <NavbarItems setIsOpen={() => false} />
+        </div>
     ) : null;
 };
 
