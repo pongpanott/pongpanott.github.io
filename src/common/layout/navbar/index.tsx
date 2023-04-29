@@ -6,7 +6,7 @@ const Navbar = ({ heroRef }: { heroRef: MutableRefObject<HTMLDivElement | null> 
     return (
         <>
             <MobileNavbar heroRef={heroRef} />
-            <TabletNavbar heroRef={heroRef} />;
+            <TabletNavbar heroRef={heroRef} />
         </>
     );
 };
