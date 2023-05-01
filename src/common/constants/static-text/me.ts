@@ -61,7 +61,14 @@ export const meStaticText = {
         },
         {
             title: 'Skill.',
-            dataList: ['JavaScript (es6+)', 'TypeScript', 'HTML & CSS', 'Node.js', 'React', 'Git'],
+            dataList: [
+                'JavaScript (es6+)',
+                'TypeScript',
+                'HTML & CSS',
+                'Node.js',
+                'React / Next.Js',
+                'Git',
+            ],
         },
         {
             title: 'Personality.',
