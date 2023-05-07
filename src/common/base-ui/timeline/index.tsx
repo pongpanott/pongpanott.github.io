@@ -1,6 +1,5 @@
 import TimelineIndicator from './timeline-indicator';
 import { meStaticText } from 'common/constants/static-text/me';
-import { useRef } from 'react';
 import YearIndicator from './year-indicator';
 import { useViewModel } from './viewmodel';
 
