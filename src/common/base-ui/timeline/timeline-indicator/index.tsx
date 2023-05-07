@@ -26,6 +26,8 @@ const TimelineIndicator = ({
 
     const indicatorHeight = isPresent ? 2 : usePlacholder ? 0 : 1;
 
+    console.log('monthOfWork', monthOfWork);
+
     return (
         <div className="z-30 relative">
             {!usePlacholder && isPresent && (

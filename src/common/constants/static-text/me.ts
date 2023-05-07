@@ -1,8 +1,6 @@
 import { JourneyModel } from 'common/types/journey';
 import { defaultValue } from '../default';
 
-const currentDateString = new Date().toJSON().slice(0, 10);
-
 export const meStaticText = {
     meTitle: 'me? Always code.',
     meMessage: `Hello again! My name is Pongpanot and I'm a frontend develop based in Chiang Mai. Focused on creating digital experiences that seamlessly blend visual appealing and highly functional, from the initial concept all the way through to launch.`,
@@ -21,7 +19,7 @@ export const meStaticText = {
                 'Communicate with multi-nationality engineers, designers, and clients on a daily work.',
             ],
             startDate: '01-01-2022',
-            endDate: currentDateString,
+            endDate: new Date().toJSON().slice(0, 10),
         },
         {
             position: 'Frontend Developer',
@@ -61,7 +59,14 @@ export const meStaticText = {
         },
         {
             title: 'Skill.',
-            dataList: ['JavaScript (es6+)', 'TypeScript', 'HTML & CSS', 'Node.js', 'React', 'Git'],
+            dataList: [
+                'JavaScript (es6+)',
+                'TypeScript',
+                'HTML & CSS',
+                'Node.js',
+                'React / Next.Js',
+                'Git',
+            ],
         },
         {
             title: 'Personality.',
