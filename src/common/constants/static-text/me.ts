@@ -1,5 +1,6 @@
 import { JourneyModel } from 'common/types/journey';
 import { defaultValue } from '../default';
+import { getCurrentDateForJourney } from 'common/utils/date-calculator';
 
 export const meStaticText = {
     meTitle: 'me? Always code.',
@@ -18,8 +19,8 @@ export const meStaticText = {
                 'Work with a variety of different frameworks, and content management systems such as React, Next.js, Tailwind CSS, and Netlify.',
                 'Communicate with multi-nationality engineers, designers, and clients on a daily work.',
             ],
-            startDate: '01-01-2022',
-            endDate: new Date().toJSON().slice(0, 10),
+            startDate: '2022/01/01',
+            endDate: getCurrentDateForJourney(),
         },
         {
             position: 'Frontend Developer',
@@ -31,8 +32,8 @@ export const meStaticText = {
                 'Developed an internal project to connect with co-working space door access and thermal printer control.',
                 'Working with a team of developers, designers, and testers to deliver a quality product.',
             ],
-            startDate: '2021-06-01',
-            endDate: '2021-12-31',
+            startDate: '2021/06/01',
+            endDate: '2021/12/31',
         },
         {
             position: 'Studying',
@@ -40,8 +41,8 @@ export const meStaticText = {
             link: '',
             date: '2017 - 2022',
             description: [],
-            startDate: '2021-01-01',
-            endDate: '2021-05-01',
+            startDate: '2021/01/01',
+            endDate: '2021/05/01',
         },
     ] as JourneyModel[],
     personalTitle: 'Mix in a pinch of street smarts and... voila!',
