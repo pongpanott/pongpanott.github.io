@@ -2,6 +2,7 @@ import TimelineIndicator from './timeline-indicator';
 import { meStaticText } from 'common/constants/static-text/me';
 import YearIndicator from './year-indicator';
 import { useViewModel } from './viewmodel';
+import { getCurrentDateForJourney } from 'common/utils/date-calculator';
 
 type TimelineProps = {
     activeJourney: number;
@@ -11,6 +12,7 @@ type TimelineProps = {
 const Timeline = ({ activeJourney, setActiveJourney }: TimelineProps) => {
     const { timelineRef, selectActiveJourney } = useViewModel({ setActiveJourney });
 
+    console.log('getCurrentDateForJourney()', getCurrentDateForJourney());
     return (
         <div className="py-4">
             <div
@@ -25,7 +27,7 @@ const Timeline = ({ activeJourney, setActiveJourney }: TimelineProps) => {
                             key={item.where}
                             id={`timeline-node-${index}`}
                             startDate={item.startDate}
-                            endDate={item.endDate}
+                            endDate={item.endDate || getCurrentDateForJourney()}
                             isPresent={index === 0}
                             isActive={index === activeJourney}
                             onClick={() => selectActiveJourney(index)}
