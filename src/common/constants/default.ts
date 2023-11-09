@@ -5,4 +5,8 @@ export const defaultValue = {
     getnuvo: 'https://www.getnuvo.com',
     bringoo: 'https://bringoo.de',
     lifeSpace: 'https://lifespaceth.com',
+    tecMove: 'https://tecmove.net',
+    tewntyScoops: 'https://20scoopscnx.com',
+    blueBik: 'https://bluebik.com',
+    xplore: 'https://www.xplore.in.th/th',
 };

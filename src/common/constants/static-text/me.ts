@@ -1,6 +1,5 @@
 import { JourneyModel } from 'common/types/journey';
 import { defaultValue } from '../default';
-import { getCurrentDateForJourney } from 'common/utils/date-calculator';
 
 export const meStaticText = {
     meTitle: 'me? Always code.',
@@ -8,10 +7,32 @@ export const meStaticText = {
     journeyTitle: 'Previous stops on my journey.',
     journey: [
         {
+            position: 'Frontend Engineer',
+            where: '@Bluebik Group',
+            link: defaultValue.blueBik,
+            date: 'October 2023 - present',
+            description: [
+                'Implement web-based application and mobile application for a customer of Bluebik Group.',
+                `Part of <a href="${defaultValue.xplore}" target="_blank" rel="noreferrer noopener">xplORe</a> application development team.`,
+                'Work with React.js and React Native.',
+            ],
+            startDate: '2023/10/01',
+            endDate: '2023/11/01',
+        },
+        {
+            position: null,
+            where: null,
+            link: null,
+            date: 'July 2023 - September 2023',
+            description: null,
+            startDate: '2023/07/01',
+            endDate: '2023/09/01',
+        },
+        {
             position: 'Frontend Developer',
             where: '@20scoope CNX',
-            link: 'https://20scoopscnx.com',
-            date: 'January 2022 - present',
+            link: defaultValue.tewntyScoops,
+            date: 'January 2022 - June 2023',
             description: [
                 'Develop a modern website with performant and maintainable code for diverse clients based in Germany.',
                 `Support a <a href="${defaultValue.getnuvo}" target="_blank" rel="noreferrer noopener">nuvo</a> team to develop a user platform website.`,
@@ -20,12 +41,12 @@ export const meStaticText = {
                 'Communicate with multi-nationality engineers, designers, and clients on a daily work.',
             ],
             startDate: '2022/01/01',
-            endDate: getCurrentDateForJourney(),
+            endDate: '2023/06/01',
         },
         {
             position: 'Frontend Developer',
             where: '@Tecmove',
-            link: 'https://tecmove.net',
+            link: defaultValue.tecMove,
             date: 'June - December 2021',
             description: [
                 `Developed web-based Point of Sale (POS) application for <a href="${defaultValue.lifeSpace}" target="_blank" rel="noreferrer noopener">Life Space</a>, a co-working space based in Chiang Mai using React and Material UI.`,

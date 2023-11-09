@@ -12,7 +12,10 @@ const TabletJourney = () => {
     return !isMobile ? (
         <div className="h-[320px] md:justify-center mx-auto md:flex gap-x-8">
             <Timeline activeJourney={activeJourney} setActiveJourney={setActiveJourney} />
-            <Journey journey={meStaticText.journey[activeJourney]} className="w-[475px]" />
+            <Journey
+                journey={meStaticText.journey[activeJourney]}
+                className="w-[475px] flex flex-col"
+            />
         </div>
     ) : null;
 };
