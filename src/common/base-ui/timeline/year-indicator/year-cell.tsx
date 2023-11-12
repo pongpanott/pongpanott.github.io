@@ -2,7 +2,7 @@ import { css, cx } from '@emotion/css';
 import { getCurrentYear } from 'common/utils/date-calculator';
 
 const YearCell = ({ year }: { year: number }) => {
-    const cellHeight = year === getCurrentYear() ? 48 : 144;
+    const cellHeight = year === getCurrentYear() ? 132 : 144;
 
     return (
         <div
