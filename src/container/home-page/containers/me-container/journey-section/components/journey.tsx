@@ -3,7 +3,6 @@ import { BaseComponentProps } from 'common/types/base-component';
 import Link from 'next/link';
 import { css, cx } from '@emotion/css';
 import { useMediaSize } from 'common/hooks/media-size';
-import { Fragment } from 'react';
 
 type JourneyProps = BaseComponentProps & {
     journey: JourneyModel;
@@ -53,12 +52,16 @@ const Journey = ({ className, journey }: JourneyProps) => {
             </ul>
         </div>
     ) : (
-        <div className={className}>
-            <div className="flex flex-col flex-1 items-center justify-center gap-y-2">
-                <p className="text-2xs md:text-xs">{journey.date}</p>
-                On Vacation
-            </div>
-        </div>
+        <>
+            {!isMobile ? (
+                <div className={className}>
+                    <div className="flex flex-col flex-1 items-center justify-center gap-y-2">
+                        <p className="text-2xs md:text-xs">{journey.date}</p>
+                        On Vacation
+                    </div>
+                </div>
+            ) : null}
+        </>
     );
 };
 
