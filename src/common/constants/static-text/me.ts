@@ -12,7 +12,7 @@ export const meStaticText = {
             link: defaultValue.blueBik,
             date: 'October 2023 - present',
             description: [
-                'Implement web-based application and mobile application for a customer of Bluebik Group.',
+                `Implement web-based application and mobile application for a customer of <a href="${defaultValue.blueBik}" target="_blank" rel="noreferrer noopener">Bluebik</a>.`,
                 `Part of <a href="${defaultValue.xplore}" target="_blank" rel="noreferrer noopener">xplORe</a> application development team.`,
                 'Work with React.js and React Native.',
             ],

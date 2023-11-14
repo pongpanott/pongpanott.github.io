@@ -3,7 +3,6 @@ import { BaseComponentProps } from 'common/types/base-component';
 import Link from 'next/link';
 import { css, cx } from '@emotion/css';
 import { useMediaSize } from 'common/hooks/media-size';
-import { Fragment } from 'react';
 
 type JourneyProps = BaseComponentProps & {
     journey: JourneyModel;
