@@ -2,7 +2,9 @@ import TimelineIndicator from './timeline-indicator';
 import { meStaticText } from 'common/constants/static-text/me';
 import YearIndicator from './year-indicator';
 import { useViewModel } from './viewmodel';
-import { getCurrentDateForJourney } from 'common/utils/date-calculator';
+import { getCurrentDateForJourney, workMonthCalculate } from 'common/utils/date-calculator';
+import { css, cx } from '@emotion/css';
+import TimelineTail from './timeline-indicator/timeline-tail';
 
 type TimelineProps = {
     activeJourney: number;
@@ -12,7 +14,12 @@ type TimelineProps = {
 const Timeline = ({ activeJourney, setActiveJourney }: TimelineProps) => {
     const { timelineRef, selectActiveJourney } = useViewModel({ setActiveJourney });
 
-    console.log('getCurrentDateForJourney()', getCurrentDateForJourney());
+    const thisYear = new Date().getFullYear();
+    const thisMonth = new Date().getMonth() + 1;
+    const lastDayOfThisYear = `${thisYear}/12/31`;
+
+    const thisYearMonthLeft =
+        workMonthCalculate(getCurrentDateForJourney(), lastDayOfThisYear) - thisMonth;
     return (
         <div className="py-4">
             <div
@@ -20,6 +27,10 @@ const Timeline = ({ activeJourney, setActiveJourney }: TimelineProps) => {
                 className="h-[288px] w-[120px] overflow-y-auto relative timeline-element flex flex-col"
             >
                 <YearIndicator />
+
+                <div className="z-30 relative">
+                    <TimelineTail className="bg-black/10" height={thisYearMonthLeft * 12} />
+                </div>
 
                 {meStaticText.journey.map((item, index) => (
                     <>
