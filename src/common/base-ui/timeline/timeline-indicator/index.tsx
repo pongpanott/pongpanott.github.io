@@ -2,6 +2,7 @@ import { css, cx } from '@emotion/css';
 import { workMonthCalculate } from 'common/utils/date-calculator';
 import TimelineNode from './timeline-node';
 import { MutableRefObject } from 'react';
+import TimelineTail from './timeline-tail';
 
 type TimelineIndicatorProps = {
     id: string;
@@ -31,14 +32,9 @@ const TimelineIndicator = ({
             {!usePlacholder && isPresent && (
                 <TimelineNode id={id} isActive={isActive} onClick={onClick} />
             )}
-            <div
-                className={cx(
-                    isActive ? 'bg-primary' : 'bg-black/10',
-                    'w-[2px] mx-auto',
-                    css`
-                        height: ${(monthOfWork - indicatorHeight) * 12}px;
-                    `
-                )}
+            <TimelineTail
+                className={isActive ? 'bg-primary' : 'bg-black/10'}
+                height={(monthOfWork - indicatorHeight) * 12}
             />
             {!usePlacholder && <TimelineNode id={id} isActive={isActive} onClick={onClick} />}
         </div>
