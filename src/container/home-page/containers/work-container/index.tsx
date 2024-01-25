@@ -5,6 +5,7 @@ import { workStaticText } from 'common/constants/static-text/work';
 import { useMediaSize } from 'common/hooks/media-size';
 import CommissionCard from 'common/base-ui/work-card/commision';
 import ContainerWrapper from 'common/layout/container-wrapper';
+import CmuInsightCard from 'common/base-ui/work-card/cmu-insight';
 
 const WorkContainer = ({ workRef }: { workRef: MutableRefObject<HTMLDivElement | null> }) => {
     const { isMobile, isTablet } = useMediaSize();
@@ -26,6 +27,7 @@ const WorkContainer = ({ workRef }: { workRef: MutableRefObject<HTMLDivElement |
             <div className="relative xl:grid xl:place-items-center w-full">
                 <div className="flex flex-col md:gap-y-6 xl:grid-cols-2 gap-y-4 xl:w-[668px] xl:grid xl:mx-auto xl:gap-8">
                     <MentalDeeDeeCard />
+                    <CmuInsightCard />
                     <CommissionCard />
                 </div>
             </div>
