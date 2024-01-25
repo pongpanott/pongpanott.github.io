@@ -1,5 +1,4 @@
-import commissionBackground from 'assets/images/work/comission/background.png';
-
+import commissionBackground from 'assets/images/work/background.png';
 import { css, cx } from '@emotion/css';
 import Link from 'next/link';
 import { defaultValue } from '../../../constants/default';
@@ -22,7 +21,6 @@ const CommissionCard = () => {
                     {workStaticText.workCard.commission.title}
                 </p>
                 <p className="text-xs mb-16 xl:text-xs xl:mb-16 md:mb-8 whitespace-pre-line md:text-sm">
-                    {' '}
                     {workStaticText.workCard.commission.description}
                 </p>
                 <Link

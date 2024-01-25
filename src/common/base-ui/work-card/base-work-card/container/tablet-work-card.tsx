@@ -26,7 +26,7 @@ const TabletWorkCard = ({
                 `
             )}
         >
-            <div className="flex gap-x-8 w-[576px] mx-auto">
+            <div className="flex gap-x-8 w-[576px] h-[270px] mx-auto">
                 <BaseWorkCard.Body className="w-[292px]">
                     <BaseWorkCard.AppLogo
                         icon={icon}
@@ -34,7 +34,7 @@ const TabletWorkCard = ({
                             'mb-[18px]',
                             css`
                                 svg {
-                                    width: 103px;
+                                    width: auto;
                                     height: 36px;
                                 }
                             `

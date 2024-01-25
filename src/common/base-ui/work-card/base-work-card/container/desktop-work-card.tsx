@@ -26,7 +26,7 @@ const DesktopWorkCard = (props: BaseWorkCardProps) => {
                         'mb-6 w-fit mx-auto',
                         css`
                             svg {
-                                width: 140px;
+                                width: auto;
                                 height: 43px;
                             }
                         `

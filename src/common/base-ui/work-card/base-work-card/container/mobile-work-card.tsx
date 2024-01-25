@@ -33,7 +33,7 @@ const MobileWorkCard = ({
                         'mb-5',
                         css`
                             svg {
-                                width: 103px;
+                                width: auto;
                                 height: 36px;
                                 margin-left: auto;
                                 margin-right: auto;
