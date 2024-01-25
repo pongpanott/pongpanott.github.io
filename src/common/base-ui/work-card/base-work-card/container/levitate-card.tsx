@@ -8,6 +8,7 @@ import { useMediaSize } from 'common/hooks/media-size';
 type LeviatetWorkCardProps = BaseWorkCardProps & {
     onMouseLeave: () => void;
     siteUrl: string;
+    levitateImageClassName?: string;
 };
 
 const LevitateWorkCard = ({
@@ -19,6 +20,7 @@ const LevitateWorkCard = ({
     tabletBackground,
     onMouseLeave,
     siteUrl,
+    levitateImageClassName,
 }: LeviatetWorkCardProps) => {
     const { isDesktop } = useMediaSize();
 
@@ -40,7 +42,7 @@ const LevitateWorkCard = ({
                             'mb-6',
                             css`
                                 svg {
-                                    width: 160px;
+                                    width: auto;
                                     height: 56px;
                                 }
                             `
@@ -65,7 +67,9 @@ const LevitateWorkCard = ({
                     </Link>
                 </div>
 
-                <div className="flex flex-col justify-end">{levitateAppImage}</div>
+                <div className={cx(levitateImageClassName, 'flex flex-col justify-end')}>
+                    {levitateAppImage}
+                </div>
             </BaseWorkCard.Body>
         </div>
     ) : null;

@@ -17,7 +17,7 @@ export const meStaticText = {
                 'Work with React.js and React Native.',
             ],
             startDate: '2023/10/01',
-            endDate: '2023/11/01',
+            endDate: null,
         },
         {
             position: null,
