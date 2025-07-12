@@ -5,7 +5,7 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
-                <title>Pongpanott.</title>
+                <title></title>
             </Head>
             <body>
                 <Main />
