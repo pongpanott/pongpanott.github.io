@@ -26,7 +26,7 @@ const HeroContainer = ({ meRef }: HeroContainerProps) => {
                     className="mb-[18px] md:mb-6"
                 />
 
-                <p className="text-sm md:text-base max-w-[463px] w-full mx-auto">
+                <p className="text-sm md:text-base max-w-[463px] lg:text-lg w-full mx-auto whitespace-pre-line">
                     {HomePageStaticText.heroMessage}
                 </p>
 
