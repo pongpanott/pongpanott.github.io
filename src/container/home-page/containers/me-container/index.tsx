@@ -8,7 +8,7 @@ const MeContainer = ({ meRef }: { meRef: MutableRefObject<HTMLDivElement | null>
     return (
         <ContainerWrapper
             containerRef={meRef}
-            className="!pt-[120px] md:!pt-[150px] !pb-0 xl:!pt-[200px] md:gap-y-[150px] gap-y-[120px] xl:gap-y-[200px]"
+            className="pt-[120px]! md:pt-[150px]! pb-0! xl:pt-[200px]! md:gap-y-[150px] gap-y-[120px] xl:gap-y-[200px]"
             useMaxWidth
         >
             <MeSection />
