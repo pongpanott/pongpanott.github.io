@@ -5,39 +5,7 @@ layer(base);
 layer(base);
 
 @import 'tailwindcss';
-
-@theme {
-    --font-gotu: Gotu;
-    --font-quattrocento: Quattrocento;
-    --font-poppins: Poppins;
-
-    --text-2xs: 10px;
-    --text-2xs--line-height: 17px;
-    --text-xs: 12px;
-    --text-xs--line-height: 20px;
-    --text-sm: 14px;
-    --text-sm--line-height: 23px;
-    --text-base: 16px;
-    --text-base--line-height: 27px;
-    --text-lg: 18px;
-    --text-lg--line-height: 30px;
-    --text-xl: 20px;
-    --text-xl--line-height: 33px;
-    --text-2xl: 22px;
-    --text-2xl--line-height: 37px;
-    --text-3xl: 1.953rem;
-    --text-4xl: 2.441rem;
-    --text-5xl: 3.052rem;
-
-    --color-primary: #d3a528;
-    --color-snow: #fffdfa;
-
-    --color-shade-0: white;
-    --color-shade-100: #333333;
-
-    --color-timeline-node: #d6d5d3;
-    --color-timeline-year: #b1b1b1;
-}
+@config "../../tailwind.config.js";
 
 @layer base {
     *,
