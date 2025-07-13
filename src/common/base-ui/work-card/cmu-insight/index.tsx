@@ -13,7 +13,7 @@ const CmuInsightCard = () => {
             description={workStaticText.workCard.cmuInsight.description}
             icon={<CmuSubLogo />}
             appImage={
-                <div className="mx-auto mb-8 w-[262px] h-[175px] flex-shrink-0 md:h-full md:mb-0 md:flex">
+                <div className="mx-auto mb-8 w-[262px] h-[175px] shrink-0 md:h-full md:mb-0 md:flex">
                     <Image
                         src={cmuInsightImg}
                         alt="cmu-insight-app"
@@ -27,7 +27,7 @@ const CmuInsightCard = () => {
             tabletBackground="linear-gradient(90deg, #F8F2FC 48%, #9D7CBC 96%)"
             desktopBackground="linear-gradient(180deg, #F8F2FC 44%, #9D7CBC 88%)"
             levitateAppImage={
-                <div className="w-[315px] h-[210px] mx-auto relative flex-shrink-0">
+                <div className="w-[315px] h-[210px] mx-auto relative shrink-0">
                     <Image
                         src={cmuInsightImg}
                         alt="cmu-insight-app"

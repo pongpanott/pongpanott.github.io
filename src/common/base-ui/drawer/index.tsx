@@ -46,7 +46,7 @@ const Drawer = ({ className, isOpen, setIsOpen, children }: DrawerProps) => {
                         css`
                             right: -256px;
                         `,
-                    'top-0 z-[60] flex h-screen w-[256px] flex-1 flex-grow flex-col bg-white font-nunito',
+                    'top-0 z-60 flex h-screen w-[256px] flex-1 grow flex-col bg-white font-nunito',
                     css`
                         transition: right 0.3s ease-in-out;
                         position: fixed;
