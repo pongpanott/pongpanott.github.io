@@ -1,9 +1,13 @@
-import { MutableRefObject } from 'react';
+import { ForwardedRef } from 'react';
 
 export const useWebScroller = () => {
-    const handleWebScroll = (ref?: MutableRefObject<HTMLDivElement | null> | null) => {
+    const handleWebScroll = (ref?: ForwardedRef<HTMLDivElement>) => {
+        let top = 0;
+        if (ref && typeof ref !== 'function' && 'current' in ref && ref.current) {
+            top = ref.current.offsetTop;
+        }
         window.scrollTo({
-            top: ref ? ref.current?.offsetTop : 0,
+            top,
             left: 0,
             behavior: 'smooth',
         });

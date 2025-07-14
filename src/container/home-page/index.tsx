@@ -1,7 +1,9 @@
 import AppLayout from 'common/layout';
 import HeroSection from './sections/hero-section';
+import JourneySection from './sections/journey-section';
 import MeSection from './sections/me-section';
 import PersonalSection from './sections/personal-section';
+import WorkSection from './sections/work-section';
 import { useViewModel } from './viewmodel';
 
 const HomePage = () => {
@@ -9,12 +11,11 @@ const HomePage = () => {
 
     return (
         <AppLayout>
-            <HeroSection meRef={meRef} />
-            <MeSection />
-            {/* <PersonalSection /> */}
-            {/* <HeroContainer meRef={meRef} />
-            <MeContainer meRef={meRef} />
-            <WorkContainer workRef={workRef} /> */}
+            <HeroSection ref={meRef} />
+            <MeSection ref={meRef} />
+            <JourneySection />
+            <PersonalSection />
+            <WorkSection ref={workRef} />
         </AppLayout>
     );
 };

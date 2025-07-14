@@ -1,22 +1,17 @@
-import { MutableRefObject } from 'react';
+import { forwardRef } from 'react';
 import MentalDeeDeeCard from 'common/base-ui/work-card/mental-dee-dee';
 import HeaderText from 'common/base-ui/text/header-text';
 import { workStaticText } from 'common/constants/static-text/work';
 import { useMediaSize } from 'common/hooks/media-size';
 import CommissionCard from 'common/base-ui/work-card/commision';
-import ContainerWrapper from 'common/layout/container-wrapper';
 import CmuInsightCard from 'common/base-ui/work-card/cmu-insight';
-import FullScreenSectionContainer from 'common/base-ui/layout/full-screen-section-container';
+import SectionContainer from 'common/base-ui/layout/section-container';
 
-const WorkContainer = ({ workRef }: { workRef: MutableRefObject<HTMLDivElement | null> }) => {
+const WorkSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     const { isMobile, isTablet } = useMediaSize();
 
     return (
-        // <ContainerWrapper
-        //     containerRef={workRef}
-        //     className="px-0! pt-[120px]! items-baseline md:pt-[150px]! pb-20! md:pb-[100px]! xl:py-[200px]! md:gap-y-[100px] gap-y-20"
-        // >
-        <FullScreenSectionContainer>
+        <SectionContainer ref={ref}>
             <div className="px-[18px] w-full max-w-[537px] md:px-0 mx-auto">
                 <HeaderText
                     message={workStaticText.workTitle}
@@ -33,9 +28,10 @@ const WorkContainer = ({ workRef }: { workRef: MutableRefObject<HTMLDivElement |
                     <CommissionCard />
                 </div>
             </div>
-        </FullScreenSectionContainer>
-        // </ContainerWrapper>
+        </SectionContainer>
     );
-};
+});
 
-export default WorkContainer;
+WorkSection.displayName = 'WorkSection';
+
+export default WorkSection;
