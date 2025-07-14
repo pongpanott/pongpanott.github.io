@@ -1,4 +1,4 @@
-import { defaultValue } from 'common/constants/default';
+import { EXTERNAL_LINK } from '@constants';
 import { HashRouteEnum } from 'common/types/hash-route';
 import Link from 'next/link';
 import React from 'react';
@@ -39,7 +39,7 @@ const NavbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => 
                 onClick={() => {
                     setIsOpen(false);
                 }}
-                href={`mailto:${defaultValue.email}`}
+                href={`mailto:${EXTERNAL_LINK.email}`}
             />
         </div>
     );

@@ -3,7 +3,6 @@ import { meStaticText } from 'common/constants/static-text/me';
 import YearIndicator from './year-indicator';
 import { useViewModel } from './viewmodel';
 import { getCurrentDateForJourney, workMonthCalculate } from 'common/utils/date-calculator';
-import { css, cx } from '@emotion/css';
 import TimelineTail from './timeline-indicator/timeline-tail';
 
 type TimelineProps = {
