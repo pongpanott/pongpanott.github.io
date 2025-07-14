@@ -86,8 +86,8 @@ export const meStaticText = {
                 'TypeScript',
                 'HTML & CSS',
                 'Node.js',
-                'React / Next.Js',
-                'Git',
+                'React / React Native / Next.Js',
+                'Git / Docker',
             ],
         },
         {
