@@ -18,7 +18,10 @@
         "paths": {
             "*": ["*"],
             "hooks": ["common/hooks/*"],
-            "constants": ["common/constants"]
+            "@constants": ["common/constants"],
+            "@base-ui": ["common/base-ui"],
+            "@hooks": ["common/hooks"],
+            "@container": ["container"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

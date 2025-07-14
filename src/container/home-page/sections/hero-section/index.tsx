@@ -7,24 +7,18 @@ import { HomePageStaticText } from 'common/constants/static-text/home';
 import HeroSectionFooter from './hero-section-footer';
 import { MutableRefObject } from 'react';
 import { useWebScroller } from 'common/hooks/web-scroller';
-import ContainerWrapper from 'common/layout/container-wrapper';
 import FullScreenSectionContainer from 'common/base-ui/layout/full-screen-section-container';
 
-type HeroContainerProps = {
+type HeroSectionProps = {
     meRef: MutableRefObject<HTMLDivElement | null>;
 };
 
-const HeroContainer = ({ meRef }: HeroContainerProps) => {
+const HeroSection = ({ meRef }: HeroSectionProps) => {
     const { isMobile } = useMediaSize();
     const { handleWebScroll } = useWebScroller();
 
     return (
-        <FullScreenSectionContainer>
-            {/* <ContainerWrapper
-                useMaxWidth
-                fixedHeightScreen
-                className="translate-y-[-62px] relative"
-            > */}
+        <FullScreenSectionContainer className="relative">
             <div className="my-auto text-center">
                 <HeaderText
                     message={HomePageStaticText.heroTitle}
@@ -43,11 +37,9 @@ const HeroContainer = ({ meRef }: HeroContainerProps) => {
                     <Icon icon={AppIconEnum.ARROW_DOWN} iconSize={isMobile ? 16 : 24} />
                 </CircleButton>
             </div>
-
-            {/* <HeroSectionFooter /> */}
-            {/* </ContainerWrapper> */}
+            <HeroSectionFooter />
         </FullScreenSectionContainer>
     );
 };
 
-export default HeroContainer;
+export default HeroSection;

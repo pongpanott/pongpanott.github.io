@@ -1,17 +1,20 @@
 import AppLayout from 'common/layout';
-import HeroContainer from './containers/hero-container';
-import MeContainer from './containers/me-container';
+import HeroSection from './sections/hero-section';
+import MeSection from './sections/me-section';
+import PersonalSection from './sections/personal-section';
 import { useViewModel } from './viewmodel';
-import WorkContainer from './containers/work-container';
 
 const HomePage = () => {
     const { meRef, workRef } = useViewModel();
 
     return (
         <AppLayout>
-            <HeroContainer meRef={meRef} />
+            <HeroSection meRef={meRef} />
+            <MeSection />
+            {/* <PersonalSection /> */}
+            {/* <HeroContainer meRef={meRef} />
             <MeContainer meRef={meRef} />
-            <WorkContainer workRef={workRef} />
+            <WorkContainer workRef={workRef} /> */}
         </AppLayout>
     );
 };
