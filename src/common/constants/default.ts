@@ -10,4 +10,5 @@ export const defaultValue = {
     tewntyScoops: 'https://20scoopscnx.com',
     blueBik: 'https://bluebik.com',
     xplore: 'https://www.xplore.in.th/th',
+    navbarOffset: 62,
 };
