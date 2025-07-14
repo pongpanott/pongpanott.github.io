@@ -1,5 +1,5 @@
 import ContactGroup from 'common/base-ui/contact-group';
-import { SITE_CONTENT } from 'common/constants';
+import { SITE_CONTENT } from '@constants';
 
 const Footer = () => {
     return (
