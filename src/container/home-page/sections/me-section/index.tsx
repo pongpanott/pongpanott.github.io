@@ -4,8 +4,8 @@ import Icon from 'common/base-ui/icon';
 import { AppIconEnum } from 'common/base-ui/icon/viewmodel';
 import SectionContainer from 'common/base-ui/layout/section-container';
 import HeaderText from 'common/base-ui/text/header-text';
-import { meStaticText } from 'common/constants/static-text/me';
 import { useMediaSize } from 'common/hooks/media-size';
+import { SITE_CONTENT } from 'common/constants';
 
 const MeSection = forwardRef<HTMLDivElement>((_, ref) => {
     const { isMobile, isTablet, isDesktop } = useMediaSize();
@@ -27,11 +27,11 @@ const MeSection = forwardRef<HTMLDivElement>((_, ref) => {
                     />
                     <div>
                         <HeaderText
-                            message={meStaticText.meTitle}
+                            message={SITE_CONTENT.me.title}
                             fontSize={isMobile ? 40 : isTablet ? 48 : 52}
                             className="mb-[18px] md:mb-5 xl:mb-6"
                         />
-                        <p className="text-sm md:text-base">{meStaticText.meMessage}</p>
+                        <p className="text-sm md:text-base">{SITE_CONTENT.me.description}</p>
                     </div>
                 </div>
             </SectionContainer>
