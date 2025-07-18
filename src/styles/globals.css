@@ -17,6 +17,12 @@ layer(base);
     }
 }
 
+@layer components {
+    h1 {
+        @apply font-quattrocento text-6xl md:text-7xl lg:text-8xl;
+    }
+}
+
 html,
 body {
     @apply bg-snow text-shade-100 font-gotu;

@@ -16,11 +16,9 @@ const HeroSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     return (
         <FullScreenSectionContainer className="relative" ref={ref}>
             <div className="my-auto text-center">
-                <HeaderText
-                    message={SITE_CONTENT.hero.title}
-                    fontSize={isMobile ? 48 : 66}
-                    className="mb-[18px] md:mb-6 md:whitespace-pre-line"
-                />
+                <h1 className="mb-[18px] md:mb-6 md:whitespace-pre-line">
+                    {SITE_CONTENT.hero.title}
+                </h1>
 
                 <p className="text-sm md:text-base max-w-[463px] lg:text-lg w-full mx-auto whitespace-pre-line">
                     {SITE_CONTENT.hero.subTitle}
