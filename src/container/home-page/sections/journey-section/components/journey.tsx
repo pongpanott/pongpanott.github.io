@@ -14,7 +14,7 @@ const Journey = ({ className, journey }: JourneyProps) => {
     return journey.position ? (
         <div className={className}>
             <div className="mb-4">
-                <p className="text-sm mb-1 md:text-base">
+                <p className="mb-1">
                     {journey.position}
                     <Link
                         href={journey?.link}
