@@ -12,7 +12,7 @@ const MentalDeeDeeCard = () => {
             description={workStaticText.workCard.mentalDeeDee.description}
             icon={<MentalDeeDeeLogo />}
             appImage={
-                <div className="w-[252px] h-[262px] mx-auto relative ">
+                <div className="w-[252px] h-[262px] mx-auto relative">
                     <Image
                         src={mentalDeeDeeImg}
                         alt="mentaldeedee-app"

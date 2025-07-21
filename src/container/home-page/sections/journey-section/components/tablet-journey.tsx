@@ -10,11 +10,11 @@ const TabletJourney = () => {
     const { isMobile } = useMediaSize();
 
     return !isMobile ? (
-        <div className="h-[320px] md:justify-center mx-auto md:flex gap-x-8">
+        <div className="h-[440px] md:justify-center mx-auto md:flex w-full gap-x-10 overflow-y-hidden">
             <Timeline activeJourney={activeJourney} setActiveJourney={setActiveJourney} />
             <Journey
                 journey={meStaticText.journey[activeJourney]}
-                className="w-[475px] flex flex-col"
+                className="flex flex-col w-[475px]"
             />
         </div>
     ) : null;
