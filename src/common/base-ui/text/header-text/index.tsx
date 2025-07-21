@@ -15,6 +15,7 @@ const fontSizeMapping: Record<string, string> = {
     66: 'text-[66px] leading-[73px]',
 };
 
+/** @deprecated */
 const HeaderText = ({ className, message, fontSize = 48 }: HeaderTextProps) => {
     return (
         <p className={cx(className, 'font-quattrocento', fontSizeMapping[fontSize])}>{message}</p>

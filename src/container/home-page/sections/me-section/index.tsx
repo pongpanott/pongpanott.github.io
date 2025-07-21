@@ -26,12 +26,10 @@ const MeSection = forwardRef<HTMLDivElement>((_, ref) => {
                         )}
                     />
                     <div>
-                        <HeaderText
-                            message={SITE_CONTENT.me.title}
-                            fontSize={isMobile ? 40 : isTablet ? 48 : 52}
-                            className="mb-[18px] md:mb-5 xl:mb-6"
-                        />
-                        <p className="text-sm md:text-base">{SITE_CONTENT.me.description}</p>
+                        <h2 className="mb-[18px] md:mb-5 lg:mb-6">{SITE_CONTENT.me.title}</h2>
+                        <p className="text-sm md:text-base max-w-[500px] mx-auto md:max-w-none">
+                            {SITE_CONTENT.me.description}
+                        </p>
                     </div>
                 </div>
             </SectionContainer>
