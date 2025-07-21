@@ -27,12 +27,11 @@ const TimelineIndicator = ({
 
     return (
         <div className="z-30 relative">
-            {!usePlacholder && isPresent && (
-                <TimelineNode id={id} isActive={isActive} onClick={onClick} />
-            )}
+            {isPresent && <TimelineNode id={id} isActive={isActive} onClick={onClick} />}
             <TimelineTail
                 className={isActive ? 'bg-primary' : 'bg-black/10'}
                 height={(monthOfWork - indicatorHeight) * 12}
+                onClick={onClick}
             />
             {!usePlacholder && <TimelineNode id={id} isActive={isActive} onClick={onClick} />}
         </div>
