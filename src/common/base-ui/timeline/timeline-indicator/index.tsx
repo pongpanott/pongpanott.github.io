@@ -1,8 +1,6 @@
-import { css, cx } from '@emotion/css';
-import { workMonthCalculate } from 'common/utils/date-calculator';
 import TimelineNode from './timeline-node';
-import { MutableRefObject } from 'react';
 import TimelineTail from './timeline-tail';
+import { DateCalculator } from 'common/utils';
 
 type TimelineIndicatorProps = {
     id: string;
@@ -23,7 +21,7 @@ const TimelineIndicator = ({
     onClick,
     usePlacholder,
 }: TimelineIndicatorProps) => {
-    const monthOfWork = workMonthCalculate(startDate, endDate);
+    const monthOfWork = DateCalculator.workMonthCalculate(startDate, endDate);
 
     const indicatorHeight = isPresent ? 2 : usePlacholder ? 0 : 1;
 

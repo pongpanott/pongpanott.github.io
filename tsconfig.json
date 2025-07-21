@@ -21,7 +21,8 @@
             "@constants": ["common/constants"],
             "@base-ui": ["common/base-ui"],
             "@hooks": ["common/hooks"],
-            "@container": ["container"]
+            "@container": ["container"],
+            "@utils": ["common/utils"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

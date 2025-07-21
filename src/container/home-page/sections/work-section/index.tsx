@@ -5,13 +5,12 @@ import { workStaticText } from 'common/constants/static-text/work';
 import { useMediaSize } from 'common/hooks/media-size';
 import CommissionCard from 'common/base-ui/work-card/commision';
 import CmuInsightCard from 'common/base-ui/work-card/cmu-insight';
-import SectionContainer from 'common/base-ui/layout/section-container';
 
 const WorkSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     const { isMobile, isTablet } = useMediaSize();
 
     return (
-        <SectionContainer ref={ref}>
+        <section ref={ref}>
             <div className="px-[18px] w-full max-w-[537px] md:px-0 mx-auto">
                 <HeaderText
                     message={workStaticText.workTitle}
@@ -28,7 +27,7 @@ const WorkSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
                     <CommissionCard />
                 </div>
             </div>
-        </SectionContainer>
+        </section>
     );
 });
 
