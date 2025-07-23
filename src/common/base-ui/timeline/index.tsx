@@ -1,9 +1,9 @@
 import TimelineIndicator from './timeline-indicator';
-import { meStaticText } from 'common/constants/static-text/me';
 import YearIndicator from './year-indicator';
 import { useViewModel } from './viewmodel';
 import { DateCalculator } from 'common/utils';
 import TimelineTail from './timeline-indicator/timeline-tail';
+import { SITE_CONTENT } from 'common/constants';
 
 type TimelineProps = {
     activeJourney: number;
@@ -25,7 +25,7 @@ const Timeline = ({ activeJourney, setActiveJourney }: TimelineProps) => {
                     />
                 </div>
 
-                {meStaticText.journey.map((item, index) => (
+                {SITE_CONTENT.journey.journey.map((item, index) => (
                     <>
                         <TimelineIndicator
                             key={item.where}
@@ -35,7 +35,7 @@ const Timeline = ({ activeJourney, setActiveJourney }: TimelineProps) => {
                             isPresent={index === 0}
                             isActive={index === activeJourney}
                             onClick={() => selectActiveJourney(index)}
-                            usePlacholder={meStaticText.journey.length - 1 === index}
+                            usePlacholder={SITE_CONTENT.journey.journey.length - 1 === index}
                         />
                     </>
                 ))}

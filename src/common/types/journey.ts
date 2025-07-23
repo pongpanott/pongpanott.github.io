@@ -1,9 +1,9 @@
 export type JourneyModel = {
-    position: string;
-    where: string;
-    link: string;
+    position: string | null;
+    where: string | null;
+    link: string | null;
     date: string;
-    description: string[];
+    description: string[] | null;
     startDate: string;
     endDate: string | null;
 };
