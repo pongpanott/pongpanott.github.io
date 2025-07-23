@@ -1,8 +1,9 @@
 import { EXTERNAL_LINK } from './external-link';
 
 const TITLE = 'pongpanott';
-
+const START_WORKING_YEAR = 2021;
 const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - START_WORKING_YEAR + 1;
 
 export const SITE_CONTENT = {
     title: TITLE,
@@ -80,6 +81,44 @@ export const SITE_CONTENT = {
                 ],
                 startDate: '2021/01/01',
                 endDate: '2021/05/01',
+            },
+        ],
+    },
+    personal: {
+        title: 'Mix in a pinch of street smarts and... boom!',
+        personal: [
+            {
+                title: 'Training.',
+                dataList: [
+                    'B.Sc, Software Engineering, Chiang Mai University',
+                    'Understanding of software development process',
+                    'Basic knowledge in UX/UI design',
+                    'Human-computer interaction',
+                    'Clean and reusable code',
+                    `${yearsOfExperience}+ years of frontend development experience`,
+                ],
+            },
+            {
+                title: 'Skill.',
+                dataList: [
+                    'JavaScript / TypeScript',
+                    'HTML & CSS',
+                    'React / React Native / Next.js',
+                    'Node.js',
+                    'Git / Docker',
+                    'Tailwind CSS / Material UI & more',
+                ],
+            },
+            {
+                title: 'Personality.',
+                dataList: [
+                    'Collaborative and open-minded',
+                    'Self-motivated',
+                    'Passionate person',
+                    'Strong listener',
+                    'Learns from mistakes',
+                    'Works well independently and in teams',
+                ],
             },
         ],
     },
