@@ -13,22 +13,26 @@ const Journey = ({ className, journey }: JourneyProps) => {
 
     return journey.position ? (
         <div className={className}>
-            <div className="mb-4">
+            <div className="mb-4 md:mb-5 lg:mb-6">
                 <p className="mb-1">
                     {journey.position}
-                    <Link
-                        href={journey?.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline"
-                    >
-                        {journey.where}
-                    </Link>
+                    {journey.link ? (
+                        <Link
+                            href={journey.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                        >
+                            {` @${journey.where}`}
+                        </Link>
+                    ) : (
+                        <span className="text-primary">{` @${journey.where}`}</span>
+                    )}
                 </p>
                 <p className="text-2xs md:text-xs">{journey.date}</p>
             </div>
 
-            <ul className="flex flex-col gap-y-1">
+            <ul className="flex flex-col gap-y-2">
                 {journey.description ? (
                     <>
                         {journey.description.map((item) => (
@@ -37,7 +41,7 @@ const Journey = ({ className, journey }: JourneyProps) => {
                                 <span
                                     dangerouslySetInnerHTML={{ __html: item }}
                                     className={cx(
-                                        'text-xs md:text-sm',
+                                        'text-xs md:text-sm lg:text-base',
                                         css`
                                             a {
                                                 text-decoration: underline;
