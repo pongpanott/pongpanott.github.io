@@ -1,4 +1,3 @@
-import { meStaticText } from 'common/constants/static-text/me';
 import React, { useState } from 'react';
 import Journey from './journey';
 import Timeline from 'common/base-ui/timeline';
