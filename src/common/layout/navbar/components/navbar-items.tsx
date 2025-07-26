@@ -39,7 +39,7 @@ const NavbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => 
                 onClick={() => {
                     setIsOpen(false);
                 }}
-                href={`mailto:${EXTERNAL_LINK.email}`}
+                href={`mailto:${EXTERNAL_LINK.contact.email}`}
             />
         </div>
     );

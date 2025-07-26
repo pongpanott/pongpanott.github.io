@@ -1,3 +1,3 @@
 export * from './site-content';
 export * from './external-link';
-export * from './default';
+export * from './work-theme';

@@ -1,4 +1,5 @@
 import { EXTERNAL_LINK } from './external-link';
+import { WORK_THEME } from './work-theme';
 
 const TITLE = 'pongpanott';
 const START_WORKING_YEAR = 2021;
@@ -121,6 +122,30 @@ export const SITE_CONTENT = {
                 ],
             },
         ],
+    },
+    work: {
+        title: 'I align my passion with my work.',
+        subTitle: `These projects are my commission work. \n Please check out what I've been working on, it's pretty dope.`,
+        works: {
+            mentalDeeDee: {
+                themeColor: WORK_THEME.mentalDeeDee.theme,
+                title: `Psychology Online Class & \n Mental Health Assessment`,
+                description:
+                    'Website shares mental health knowledge with the goal of healing oneself and others. It aims to provide all-around resources and information to improve mental well-being.',
+                siteUrl: null,
+            },
+            cmuInsight: {
+                themeColor: WORK_THEME.cmuInsihnt.theme,
+                title: `CMU Insight an University \n Activity Management`,
+                description:
+                    'The Activity Management System empowers staff to dynamically align activities with evaluation forms. Furthermore, the system streamlines user registration for activities, enabling individuals to easily sign up and participate in various events.',
+                siteUrl: EXTERNAL_LINK.works.cmuInsignt,
+            },
+            commission: {
+                title: 'Want to make a strong impression website?',
+                description: `Maybe I can help you, \n Let's join forces and create something epic.`,
+            },
+        },
     },
     footer: `Designed & Developed by ${TITLE} ${currentYear}`,
 };

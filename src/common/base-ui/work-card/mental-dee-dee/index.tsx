@@ -1,15 +1,15 @@
 import BaseWorkCard from '../base-work-card';
 import MentalDeeDeeLogo from 'assets/icons/work/mentaldeedee-logo.svg';
 import mentalDeeDeeImg from 'assets/images/work/mental-dee-dee.png';
+import { SITE_CONTENT } from 'common/constants';
 import Image from 'next/image';
-import { workStaticText } from '../../../constants/static-text/work';
 
 const MentalDeeDeeCard = () => {
     return (
         <BaseWorkCard
-            themeColor={workStaticText.workCard.mentalDeeDee.themeColor}
-            title={workStaticText.workCard.mentalDeeDee.title}
-            description={workStaticText.workCard.mentalDeeDee.description}
+            themeColor={SITE_CONTENT.work.works.mentalDeeDee.themeColor}
+            title={SITE_CONTENT.work.works.mentalDeeDee.title}
+            description={SITE_CONTENT.work.works.mentalDeeDee.description}
             icon={<MentalDeeDeeLogo />}
             appImage={
                 <div className="w-[252px] h-[262px] mx-auto relative">
@@ -36,7 +36,7 @@ const MentalDeeDeeCard = () => {
                     />
                 </div>
             }
-            siteUrl={workStaticText.workCard.mentalDeeDee.siteUrl}
+            siteUrl={SITE_CONTENT.work.works.mentalDeeDee.siteUrl}
         />
     );
 };
