@@ -15,38 +15,79 @@ const TabletWorkCard = ({
     const { isTablet } = useMediaSize();
 
     return isTablet ? (
-        <Link
-            href={siteUrl}
-            target="_blank"
-            rel="noreferrer noopener"
-            className={cx(
-                'pt-8 px-8',
-                css`
-                    background: ${tabletBackground};
-                `
-            )}
-        >
-            <div className="flex gap-x-8 w-[576px] h-[270px] mx-auto">
-                <BaseWorkCard.Body className="w-[292px]">
-                    <BaseWorkCard.AppLogo
-                        icon={icon}
-                        className={cx(
-                            'mb-[18px]',
-                            css`
-                                svg {
-                                    width: auto;
-                                    height: 36px;
-                                }
-                            `
-                        )}
-                    />
-                    <BaseWorkCard.Title title={title} themeColor={themeColor} className="" />
-                    <BaseWorkCard.Description description={description} className="text-xs" />
-                </BaseWorkCard.Body>
+        <>
+            {siteUrl ? (
+                <Link
+                    href={siteUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className={cx(
+                        'pt-8 px-8',
+                        css`
+                            background: ${tabletBackground};
+                        `
+                    )}
+                >
+                    <div className="flex gap-x-8 w-[576px] h-[270px] mx-auto">
+                        <BaseWorkCard.Body className="w-[292px]">
+                            <BaseWorkCard.AppLogo
+                                icon={icon}
+                                className={cx(
+                                    'mb-[18px]',
+                                    css`
+                                        svg {
+                                            width: auto;
+                                            height: 36px;
+                                        }
+                                    `
+                                )}
+                            />
+                            <BaseWorkCard.Title
+                                title={title}
+                                themeColor={themeColor}
+                                className=""
+                            />
+                            <BaseWorkCard.Description
+                                description={description}
+                                className="text-xs"
+                            />
+                        </BaseWorkCard.Body>
 
-                {appImage}
-            </div>
-        </Link>
+                        {appImage}
+                    </div>
+                </Link>
+            ) : (
+                <div>
+                    <div className="flex gap-x-8 w-[576px] h-[270px] mx-auto">
+                        <BaseWorkCard.Body className="w-[292px]">
+                            <BaseWorkCard.AppLogo
+                                icon={icon}
+                                className={cx(
+                                    'mb-[18px]',
+                                    css`
+                                        svg {
+                                            width: auto;
+                                            height: 36px;
+                                        }
+                                    `
+                                )}
+                            />
+                            <BaseWorkCard.Title
+                                title={title}
+                                themeColor={themeColor}
+                                className=""
+                            />
+                            <BaseWorkCard.Description
+                                description={description}
+                                className="text-xs"
+                            />
+                        </BaseWorkCard.Body>
+
+                        {appImage}
+                    </div>
+                </div>
+            )}
+        </>
     ) : null;
 };
 

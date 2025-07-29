@@ -1,16 +1,16 @@
 import React from 'react';
 import BaseWorkCard from '../base-work-card';
-import { workStaticText } from 'common/constants/static-text/work';
 import CmuSubLogo from 'assets/icons/work/cmu-sub-logo.svg';
 import Image from 'next/image';
 import cmuInsightImg from 'assets/images/work/cmu-insight.png';
+import { SITE_CONTENT } from 'common/constants';
 
 const CmuInsightCard = () => {
     return (
         <BaseWorkCard
-            themeColor={workStaticText.workCard.cmuInsight.themeColor}
-            title={workStaticText.workCard.cmuInsight.title}
-            description={workStaticText.workCard.cmuInsight.description}
+            themeColor={SITE_CONTENT.work.works.cmuInsight.themeColor}
+            title={SITE_CONTENT.work.works.cmuInsight.title}
+            description={SITE_CONTENT.work.works.cmuInsight.description}
             icon={<CmuSubLogo />}
             appImage={
                 <div className="mx-auto mb-8 w-[262px] h-[175px] shrink-0 md:h-full md:mb-0 md:flex">
@@ -38,7 +38,7 @@ const CmuInsightCard = () => {
                 </div>
             }
             levitateImageClassName="justify-center"
-            siteUrl={workStaticText.workCard.cmuInsight.siteUrl}
+            siteUrl={SITE_CONTENT.work.works.cmuInsight.siteUrl}
         />
     );
 };

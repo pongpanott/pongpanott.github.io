@@ -7,7 +7,7 @@ import { useMediaSize } from 'common/hooks/media-size';
 
 type LeviatetWorkCardProps = BaseWorkCardProps & {
     onMouseLeave: () => void;
-    siteUrl: string;
+    siteUrl: string | null;
     levitateImageClassName?: string;
 };
 
@@ -55,16 +55,18 @@ const LevitateWorkCard = ({
                     />
                     <BaseWorkCard.Description description={description} className="text-sm" />
 
-                    <Link href={siteUrl} passHref legacyBehavior>
-                        <a
-                            target="_blank"
-                            rel="noopener"
-                            className="text-xs mx-auto mt-auto mb-6 flex gap-x-1 items-center"
-                        >
-                            Visit site
-                            <Icon icon={AppIconEnum.ARROW_SINGLE_RIGHT} iconSize={5} />
-                        </a>
-                    </Link>
+                    {siteUrl ? (
+                        <Link href={siteUrl} passHref legacyBehavior>
+                            <a
+                                target="_blank"
+                                rel="noopener"
+                                className="text-xs mx-auto mt-auto mb-6 flex gap-x-1 items-center"
+                            >
+                                Visit site
+                                <Icon icon={AppIconEnum.ARROW_SINGLE_RIGHT} iconSize={5} />
+                            </a>
+                        </Link>
+                    ) : null}
                 </div>
 
                 <div className={cx(levitateImageClassName, 'flex flex-col justify-end')}>
