@@ -1,6 +1,6 @@
 import { css, cx } from '@emotion/css';
 import { BaseComponentProps } from '../../../types/base-component';
-import { useMediaSize } from '../../../hooks/media-size';
+import UnoptimizedImage from 'common/base-ui/unoptimized-image';
 
 export type WorkCardTitleProps = BaseComponentProps & {
     title: string;
@@ -13,8 +13,11 @@ export type WorkCardDescriptionProps = BaseComponentProps & {
     description: string;
 };
 
-export type WorkCardAppLogo = BaseComponentProps & {
-    icon: React.ReactNode;
+export type WorkCardAppLogoProps = BaseComponentProps & {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
 };
 
 export const Title = ({ className, title, themeColor }: WorkCardTitleProps) => (
@@ -39,6 +42,4 @@ export const Body = ({ className, children }: WorkCardBodyProps) => (
     <div className={className}>{children}</div>
 );
 
-export const AppLogo = ({ className, icon }: WorkCardAppLogo) => (
-    <div className={className}>{icon}</div>
-);
+export const AppLogo = (props: WorkCardAppLogoProps) => <UnoptimizedImage {...props} />;

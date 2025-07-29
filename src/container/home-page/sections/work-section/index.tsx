@@ -1,11 +1,12 @@
-import { forwardRef } from 'react';
-import MentalDeeDeeCard from 'common/base-ui/work-card/mental-dee-dee';
+import { forwardRef, useState } from 'react';
 import CommissionCard from 'common/base-ui/work-card/commision';
-import CmuInsightCard from 'common/base-ui/work-card/cmu-insight';
 import { SITE_CONTENT } from 'common/constants';
 import SectionContainer from 'common/base-ui/layout/section-container';
+import WorkCard from 'common/base-ui/work-card/work-card';
 
 const WorkSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
+    const [hoveringIndex, setHoveringIndex] = useState(-1);
+
     return (
         <SectionContainer ref={ref} className="px-0! max-w-none!">
             <div className="px-[18px] w-full max-w-[537px] md:px-0 mx-auto">
@@ -17,8 +18,18 @@ const WorkSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
 
             <div className="relative xl:grid xl:place-items-center w-full">
                 <div className="flex flex-col md:gap-y-6 xl:grid-cols-2 gap-y-4 xl:w-[668px] xl:grid xl:mx-auto xl:gap-8">
-                    <MentalDeeDeeCard />
-                    <CmuInsightCard />
+                    {SITE_CONTENT.work.works.map((work, index) => (
+                        <WorkCard
+                            key={work.id}
+                            {...work}
+                            isHovering={hoveringIndex === index}
+                            setIsHovering={() =>
+                                setHoveringIndex((prev) =>
+                                    prev === index && prev > -1 ? -1 : index
+                                )
+                            }
+                        />
+                    ))}
                     <CommissionCard />
                 </div>
             </div>

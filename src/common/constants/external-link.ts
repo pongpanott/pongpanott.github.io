@@ -14,6 +14,6 @@ export const EXTERNAL_LINK = {
     blueplus: 'https://apps.apple.com/th/app/blueplus/id1663833654',
     blueplusMerchant: 'https://apps.apple.com/th/app/blueplus-merchant/id6743200805',
     works: {
-        cmuInsignt: 'https://www.cmuinsight.eqd.cmu.ac.th',
+        cmuInsight: 'https://www.cmuinsight.eqd.cmu.ac.th',
     },
 };
