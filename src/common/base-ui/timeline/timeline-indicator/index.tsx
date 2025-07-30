@@ -26,7 +26,7 @@ const TimelineIndicator = ({
     const indicatorHeight = isPresent ? 2 : usePlacholder ? 0 : 1;
 
     return (
-        <div className="z-30 relative">
+        <div className="z-[30] relative">
             {isPresent && <TimelineNode id={id} isActive={isActive} onClick={onClick} />}
             <TimelineTail
                 className={isActive ? 'bg-primary' : 'bg-black/10'}

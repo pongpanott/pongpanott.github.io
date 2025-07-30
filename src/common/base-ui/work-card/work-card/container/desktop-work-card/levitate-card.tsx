@@ -28,7 +28,7 @@ const LevitateWorkCard = ({
         <div
             onMouseLeave={onMouseLeave}
             className={cx(
-                'absolute top-0 z-10 left-0 w-screen h-[361px]',
+                'absolute top-0 z-[10] left-0 w-screen h-[361px]',
                 css`
                     background: linear-gradient(
                         90deg,

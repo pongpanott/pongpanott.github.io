@@ -18,7 +18,7 @@ const Timeline = ({ activeJourney, setActiveJourney }: TimelineProps) => {
             <div ref={timelineRef} className="w-[120px] relative flex flex-col">
                 <YearIndicator />
 
-                <div className="z-30 relative">
+                <div className="z-[30] relative">
                     <TimelineTail
                         className="bg-black/10"
                         height={DateCalculator.getMonthsLeftInYear() * 12}
