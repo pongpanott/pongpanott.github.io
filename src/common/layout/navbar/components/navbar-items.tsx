@@ -35,11 +35,11 @@ const NavbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => 
                 href={HashRouteEnum.ME}
             />
             <NavbarItem
-                label="get in touch."
+                label="drop a line."
                 onClick={() => {
                     setIsOpen(false);
                 }}
-                href={`mailto:${EXTERNAL_LINK.contact.email}`}
+                href={`tel:${EXTERNAL_LINK.contact.tel}`}
             />
         </div>
     );
