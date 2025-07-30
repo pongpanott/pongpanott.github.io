@@ -1,4 +1,4 @@
-import { defaultValue } from 'common/constants/default';
+import { EXTERNAL_LINK } from '@constants';
 import { HashRouteEnum } from 'common/types/hash-route';
 import Link from 'next/link';
 import React from 'react';
@@ -35,11 +35,11 @@ const NavbarItems = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }) => 
                 href={HashRouteEnum.ME}
             />
             <NavbarItem
-                label="get in touch."
+                label="drop a line."
                 onClick={() => {
                     setIsOpen(false);
                 }}
-                href={`mailto:${defaultValue.email}`}
+                href={`tel:${EXTERNAL_LINK.contact.tel}`}
             />
         </div>
     );

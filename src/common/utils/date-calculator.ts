@@ -1,19 +1,36 @@
-export const workMonthCalculate = (startDate: string, endDate: string) => {
-    const monthDiff = new Date(endDate).getMonth() - new Date(startDate).getMonth() + 1;
-    const yearDiff = new Date(endDate).getFullYear() - new Date(startDate).getFullYear();
+class DateCalculator {
+    private static parseDate(dateStr?: string): Date {
+        return dateStr ? new Date(dateStr) : new Date();
+    }
 
-    return monthDiff + yearDiff * 12;
-};
+    private static formatDate(date: Date): string {
+        const year = date.getFullYear();
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const day = date.getDate().toString().padStart(2, '0');
+        return `${year}/${month}/${day}`;
+    }
 
-export const getCurrentYear = () => new Date().getFullYear();
+    static workMonthCalculate(startDate: string, endDate: string): number {
+        const start = this.parseDate(startDate);
+        const end = this.parseDate(endDate);
+        const yearDiff = end.getFullYear() - start.getFullYear();
+        const monthDiff = end.getMonth() - start.getMonth();
+        return yearDiff * 12 + monthDiff + 1;
+    }
 
-export const getCurrentDateForJourney = () => {
-    const date = new Date();
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
+    static getCurrentYear(): number {
+        return this.parseDate().getFullYear();
+    }
 
-    const formattedDate = `${year}/${month}/${day}`;
+    static getCurrentDateForJourney(): string {
+        return this.formatDate(this.parseDate());
+    }
 
-    return formattedDate;
-};
+    static getMonthsLeftInYear(): number {
+        const now = this.parseDate();
+        const currentMonth = now.getMonth() + 1;
+        return 12 - currentMonth + 1;
+    }
+}
+
+export default DateCalculator;

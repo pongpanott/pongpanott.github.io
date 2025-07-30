@@ -11,7 +11,7 @@ type DrawerProps = BaseComponentProps & {
 const Drawer = ({ className, isOpen, setIsOpen, children }: DrawerProps) => {
     return (
         <>
-            {isOpen && <div className="fixed inset-0 top-0 z-40 flex h-screen w-screen" />}
+            {isOpen && <div className="fixed inset-0 top-0 z-[40] flex h-screen w-screen" />}
             <div
                 className={cx(
                     isOpen && 'inset-0 h-screen w-screen',
@@ -25,9 +25,9 @@ const Drawer = ({ className, isOpen, setIsOpen, children }: DrawerProps) => {
                             transition: opacity 1s ease-out;
                             opacity: 0;
                         `,
-                    'fixed top-0 z-50 flex bg-black'
+                    'fixed top-0 z-[50] flex bg-black'
                 )}
-                onClick={(e) => {
+                onClick={() => {
                     setIsOpen(false);
                 }}
             />
@@ -46,7 +46,7 @@ const Drawer = ({ className, isOpen, setIsOpen, children }: DrawerProps) => {
                         css`
                             right: -256px;
                         `,
-                    'top-0 z-[60] flex h-screen w-[256px] flex-1 flex-grow flex-col bg-white font-nunito',
+                    'top-0 z-[60] flex h-screen w-[256px] flex-1 grow flex-col bg-white font-nunito',
                     css`
                         transition: right 0.3s ease-in-out;
                         position: fixed;

@@ -1,4 +1,4 @@
-import { meStaticText } from 'common/constants/static-text/me';
+import { SITE_CONTENT } from 'common/constants';
 import { useRef } from 'react';
 
 export const useViewModel = ({
@@ -13,14 +13,14 @@ export const useViewModel = ({
     };
 
     const selectActiveJourney = (index: number) => {
-        const secondLastIndex = meStaticText.journey.length - 2;
+        const secondLastIndex = SITE_CONTENT.journey.journey.length - 2;
         setActiveJourney(index);
 
         if (index === 0) {
             scrollTo(0);
         } else {
             if (index === secondLastIndex) {
-                const totalNodeHeight = meStaticText.journey
+                const totalNodeHeight = SITE_CONTENT.journey.journey
                     .map(
                         (_, index) =>
                             document.getElementById(`timeline-node-${index}`)?.offsetTop || 0
