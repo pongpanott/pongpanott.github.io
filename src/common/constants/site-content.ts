@@ -133,7 +133,7 @@ export const SITE_CONTENT = {
                 gradientColors: WORK_THEME.mentalDeeDee.gradients,
                 title: `Psychology Online Class & \n Mental Health Assessment`,
                 description:
-                    'Website shares mental health knowledge with the goal of healing oneself and others. It aims to provide all-around resources and information to improve mental well-being.',
+                    'An online platform offering psychology courses and mental health assessments. It provides holistic resources and knowledge to support emotional well-being and self-healing.',
                 siteUrl: null,
                 appLogo: {
                     src: '/icons/work/mentaldeedee-logo.svg',
@@ -155,12 +155,12 @@ export const SITE_CONTENT = {
                 appImage: '/images/work/mental-dee-dee.png',
             },
             {
-                id: 'cmu-inscight',
+                id: 'cmu-insight',
                 themeColor: WORK_THEME.cmuInsight.theme,
                 gradientColors: WORK_THEME.cmuInsight.gradients,
-                title: `CMU Insight an University \n Activity Management`,
+                title: `CMU Insight a University \n Activity Management`,
                 description:
-                    'The Activity Management System empowers staff to dynamically align activities with evaluation forms. Furthermore, the system streamlines user registration for activities, enabling individuals to easily sign up and participate in various events.',
+                    'An activity management system for university staff and students. It enables dynamic alignment of events with evaluation forms and streamlines user registration and participation.',
                 siteUrl: EXTERNAL_LINK.works.cmuInsight,
                 appLogo: {
                     src: '/icons/work/cmu-sub-logo.svg',
@@ -187,7 +187,7 @@ export const SITE_CONTENT = {
                 gradientColors: WORK_THEME.scfc.gradients,
                 title: 'SCFC CMU Official Website',
                 description:
-                    'The official website of the Craniofacial Center under the Princess Sirindhorn IT Foundation at Chiang Mai University serves as the primary platform for sharing information. Built on a Content Management System (CMS), it allows for dynamic and efficient content updates by administrators.',
+                    'The official website of the Craniofacial Center under the Princess Sirindhorn IT Foundation at Chiang Mai University serves as the primary platform for sharing information. Built on a Content Management System (CMS), it empowers administrators to efficiently manage and share up-to-date information.',
                 siteUrl: EXTERNAL_LINK.works.scfc,
                 appLogo: {
                     src: '/icons/work/cmu-sub-logo.svg',
