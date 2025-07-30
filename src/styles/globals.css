@@ -1,21 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap')
-layer(base);
-@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap') layer(base);
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
-layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@import 'tailwindcss';
-@config "../../tailwind.config.js";
-
-@layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentcolor);
-    }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer components {
     h1 {
