@@ -4,11 +4,15 @@ import Link from 'next/link';
 import Icon from '../../icon';
 import { AppIconEnum } from '../../icon/viewmodel';
 import { EXTERNAL_LINK, SITE_CONTENT } from 'common/constants';
+import { BaseComponentProps } from 'common/types/base-component';
 
-const CommissionCard = () => {
+type CommissionCardProps = BaseComponentProps;
+
+const CommissionCard = ({ className }: CommissionCardProps) => {
     return (
         <div
             className={cx(
+                className,
                 'relative px-[18px] py-[67px] pb-[47px] xl:py-[68px] md:py-[21px] text-center',
                 css`
                     background-image: url(${commissionBackground.src});

@@ -14,6 +14,7 @@ const DesktopWorkCard = (props: DesktopWorkCardProps) => {
             <div
                 onMouseEnter={() => props.setIsHovering(true)}
                 className={cx(
+                    props.className,
                     'px-8 pt-8 relative overflow-hidden w-[316px] h-[361px]',
                     css`
                         background: linear-gradient(

@@ -7,4 +7,8 @@ export const WORK_THEME = {
         theme: '#784BA3',
         gradients: ['#F8F2FC', '#9D7CBC'],
     },
+    scfc: {
+        theme: '#443090',
+        gradients: ['#E9E5F1', '#6750A4'],
+    },
 };

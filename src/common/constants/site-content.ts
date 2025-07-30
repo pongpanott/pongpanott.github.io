@@ -128,7 +128,34 @@ export const SITE_CONTENT = {
         subTitle: `These projects are my commission work. \n Please check out what I've been working on, it's pretty dope.`,
         works: [
             {
-                id: 'cmu-insight',
+                id: 'mental-dee-dee',
+                themeColor: WORK_THEME.mentalDeeDee.theme,
+                gradientColors: WORK_THEME.mentalDeeDee.gradients,
+                title: `Psychology Online Class & \n Mental Health Assessment`,
+                description:
+                    'Website shares mental health knowledge with the goal of healing oneself and others. It aims to provide all-around resources and information to improve mental well-being.',
+                siteUrl: null,
+                appLogo: {
+                    src: '/icons/work/mentaldeedee-logo.svg',
+                    size: {
+                        s: {
+                            width: 103,
+                            height: 36,
+                        },
+                        m: {
+                            width: 140,
+                            height: 42,
+                        },
+                        l: {
+                            width: 160,
+                            height: 56,
+                        },
+                    },
+                },
+                appImage: '/images/work/mental-dee-dee.png',
+            },
+            {
+                id: 'cmu-inscight',
                 themeColor: WORK_THEME.cmuInsight.theme,
                 gradientColors: WORK_THEME.cmuInsight.gradients,
                 title: `CMU Insight an University \n Activity Management`,
@@ -155,31 +182,31 @@ export const SITE_CONTENT = {
                 appImage: '/images/work/cmu-insight.png',
             },
             {
-                id: 'mental-dee-dee',
-                themeColor: WORK_THEME.mentalDeeDee.theme,
-                gradientColors: WORK_THEME.mentalDeeDee.gradients,
-                title: `Psychology Online Class & \n Mental Health Assessment`,
+                id: 'scfc-cmu',
+                themeColor: WORK_THEME.scfc.theme,
+                gradientColors: WORK_THEME.scfc.gradients,
+                title: 'SCFC CMU Official Website',
                 description:
-                    'Website shares mental health knowledge with the goal of healing oneself and others. It aims to provide all-around resources and information to improve mental well-being.',
-                siteUrl: null,
+                    'The official website of the Craniofacial Center under the Princess Sirindhorn IT Foundation at Chiang Mai University serves as the primary platform for sharing information. Built on a Content Management System (CMS), it allows for dynamic and efficient content updates by administrators.',
+                siteUrl: EXTERNAL_LINK.works.scfc,
                 appLogo: {
-                    src: '/icons/work/mentaldeedee-logo.svg',
+                    src: '/icons/work/cmu-sub-logo.svg',
                     size: {
                         s: {
-                            width: 103,
+                            width: 70,
                             height: 36,
                         },
                         m: {
-                            width: 140,
+                            width: 78,
                             height: 42,
                         },
                         l: {
-                            width: 160,
+                            width: 119,
                             height: 56,
                         },
                     },
                 },
-                appImage: '/images/work/mental-dee-dee.png',
+                appImage: '/images/work/scfc-cmu.png',
             },
         ],
         commission: {
