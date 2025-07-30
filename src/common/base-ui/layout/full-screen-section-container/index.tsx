@@ -1,6 +1,6 @@
 import { cx } from '@emotion/css';
 import { BaseComponentProps } from 'common/types/base-component';
-import React, { PropsWithChildren, forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import SectionContainer from '../section-container';
 
 type FullScreenSectionContainerProps = BaseComponentProps & {

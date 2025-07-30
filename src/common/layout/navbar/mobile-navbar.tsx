@@ -1,4 +1,4 @@
-import React, { MutableRefObject } from 'react';
+import React from 'react';
 import Icon from '../../base-ui/icon';
 import { AppIconEnum } from '../../base-ui/icon/viewmodel';
 import NavbarDrawer from './components/navbar-drawer';

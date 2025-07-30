@@ -31,6 +31,8 @@
         "@svgr/webpack": "7.0.0",
         "@tailwindcss/postcss": "4.1.11",
         "@types/jest": "30.0.0",
+        "@typescript-eslint/eslint-plugin": "5.59.11",
+        "@typescript-eslint/parser": "5.59.11",
         "eslint-plugin-jsx-a11y": "6.10.2",
         "eslint-plugin-react": "7.32.2",
         "husky": "8.0.3",
