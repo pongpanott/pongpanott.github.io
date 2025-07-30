@@ -1,26 +1,26 @@
 import { css, cx } from '@emotion/css';
-import BaseWorkCard, { BaseWorkCardProps } from '..';
+import WorkCard, { WorkCardProps } from '../..';
 import Link from 'next/link';
-import Icon from '../../../icon';
-import { AppIconEnum } from '../../../icon/viewmodel';
 import { useMediaSize } from 'common/hooks/media-size';
+import UnoptimizedImage from 'common/base-ui/unoptimized-image';
+import Icon from 'common/base-ui/icon';
+import { AppIconEnum } from 'common/base-ui/icon/viewmodel';
 
-type LeviatetWorkCardProps = BaseWorkCardProps & {
+type LeviatetWorkCardProps = WorkCardProps & {
     onMouseLeave: () => void;
     siteUrl: string | null;
-    levitateImageClassName?: string;
 };
 
 const LevitateWorkCard = ({
+    id,
     title,
     themeColor,
+    gradientColors,
     description,
-    icon,
-    levitateAppImage,
-    tabletBackground,
-    onMouseLeave,
+    appLogo,
+    appImage,
     siteUrl,
-    levitateImageClassName,
+    onMouseLeave,
 }: LeviatetWorkCardProps) => {
     const { isDesktop } = useMediaSize();
 
@@ -30,30 +30,28 @@ const LevitateWorkCard = ({
             className={cx(
                 'absolute top-0 z-10 left-0 w-screen h-[361px]',
                 css`
-                    background: ${tabletBackground};
+                    background: linear-gradient(
+                        90deg,
+                        ${gradientColors[0]} 48%,
+                        ${gradientColors[1]} 96%
+                    );
                 `
             )}
         >
-            <BaseWorkCard.Body className="flex mx-auto pt-8 h-full gap-x-[48px] w-[761px]">
+            <WorkCard.Body className="flex mx-auto pt-8 h-full gap-x-[48px] w-[761px]">
                 <div className="w-[398px] flex flex-col">
-                    <BaseWorkCard.AppLogo
-                        icon={icon}
-                        className={cx(
-                            'mb-6',
-                            css`
-                                svg {
-                                    width: auto;
-                                    height: 56px;
-                                }
-                            `
-                        )}
+                    <WorkCard.AppLogo
+                        src={appLogo.src}
+                        alt={id}
+                        {...appLogo.size.l}
+                        className="mb-6"
                     />
-                    <BaseWorkCard.Title
+                    <WorkCard.Title
                         title={title}
                         themeColor={themeColor}
                         className="text-[22px] leading-[33px] mb-4"
                     />
-                    <BaseWorkCard.Description description={description} className="text-sm" />
+                    <WorkCard.Description description={description} className="text-sm" />
 
                     {siteUrl ? (
                         <Link href={siteUrl} passHref legacyBehavior>
@@ -69,10 +67,10 @@ const LevitateWorkCard = ({
                     ) : null}
                 </div>
 
-                <div className={cx(levitateImageClassName, 'flex flex-col justify-end')}>
-                    {levitateAppImage}
+                <div className="flex flex-col justify-end">
+                    <UnoptimizedImage src={appImage} alt={id} width={315} height={328} />
                 </div>
-            </BaseWorkCard.Body>
+            </WorkCard.Body>
         </div>
     ) : null;
 };

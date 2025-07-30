@@ -1,6 +1,5 @@
 import CircleButton from 'common/base-ui/buttons/circle-button';
 import Icon from 'common/base-ui/icon';
-import HeaderText from 'common/base-ui/text/header-text';
 import { useMediaSize } from 'common/hooks/media-size';
 import { AppIconEnum } from 'common/base-ui/icon/viewmodel';
 import HeroSectionFooter from './hero-section-footer';
