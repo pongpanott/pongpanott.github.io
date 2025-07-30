@@ -3,6 +3,7 @@ export const EXTERNAL_LINK = {
         email: 'plurm.pongpanot@gmail.com',
         github: 'https://github.com/pongpanott',
         linkedIn: 'https://www.linkedin.com/in/pongpanot-tunkrongsin-b61449139/',
+        tel: '+66840454666',
     },
     cmu: 'https://www.cmu.ac.th',
     getnuvo: 'https://www.getnuvo.com',

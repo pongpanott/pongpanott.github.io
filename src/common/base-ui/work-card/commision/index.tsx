@@ -27,10 +27,10 @@ const CommissionCard = ({ className }: CommissionCardProps) => {
                     {SITE_CONTENT.work.commission.description}
                 </p>
                 <Link
-                    href={`mailto:${EXTERNAL_LINK.contact.email}`}
+                    href={`tel:${EXTERNAL_LINK.contact.tel}`}
                     className="w-fit mx-auto flex items-center gap-x-2"
                 >
-                    <span className="text-base">Get in touch</span>
+                    <span className="text-base">Drop a Line</span>
                     <Icon icon={AppIconEnum.ARROW_RIGHT} iconSize={16} />
                 </Link>
             </div>
