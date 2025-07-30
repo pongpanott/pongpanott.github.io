@@ -1,5 +1,5 @@
 import { BaseComponentProps } from 'common/types/base-component';
-import React, { PropsWithChildren, forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 
 type SectionContainerProps = BaseComponentProps & {
     children: React.ReactNode;

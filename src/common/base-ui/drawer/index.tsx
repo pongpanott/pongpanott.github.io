@@ -27,7 +27,7 @@ const Drawer = ({ className, isOpen, setIsOpen, children }: DrawerProps) => {
                         `,
                     'fixed top-0 z-50 flex bg-black'
                 )}
-                onClick={(e) => {
+                onClick={() => {
                     setIsOpen(false);
                 }}
             />
