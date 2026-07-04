@@ -27,12 +27,12 @@ module.exports = {
                 primary: '#D3A528',
                 snow: '#FFFDFA',
                 shade: {
-                    0: 'white',
-                    100: '#333333',
+                    0: '#FFFFFF',
+                    100: '#3A342C',
                 },
                 timeline: {
-                    node: '#D6D5D3',
-                    year: '#B1B1B1',
+                    node: '#DAD4C9',
+                    year: '#B3A896',
                 },
             },
         },
