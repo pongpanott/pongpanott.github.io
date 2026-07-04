@@ -13,8 +13,8 @@ export const SITE_CONTENT = {
         subTitle: `I'm Pongpanot, a software engineer. Interested in learning more about me? Let’s follow the sign.`,
     },
     me: {
-        title: 'me? Always coding.',
-        description: `Hello again! I’m Pongpanot, a software engineer specializing in frontend and mobile development, based in Chiang Mai. Focused on creating digital experiences that seamlessly blend visual appeal and high functionality, from the initial concept all the way through to launch.`,
+        title: 'Before AI, there was me.',
+        description: `I'm Pongpanot, a frontend engineer in Chiang Mai specializing in React and React Native. Now imagine what I'm capable of with AI in my hands.`,
     },
     journey: {
         title: 'Previous stops on my journey.',
@@ -214,5 +214,5 @@ export const SITE_CONTENT = {
             description: `Maybe I can help you, \n Let's join forces and create something epic.`,
         },
     },
-    footer: `Designed & Developed by ${TITLE} ${currentYear}`,
+    footer: `Crafted with Mojo and Gin — pongpanott`,
 };

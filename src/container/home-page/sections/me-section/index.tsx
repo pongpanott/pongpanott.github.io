@@ -25,7 +25,7 @@ const MeSection = forwardRef<HTMLDivElement>((_, ref) => {
                         )}
                     />
                     <div>
-                        <h2 className="mb-[18px] md:mb-5 lg:mb-6">{SITE_CONTENT.me.title}</h2>
+                        <h2 className="mb-4">{SITE_CONTENT.me.title}</h2>
                         <p className="text-sm md:text-base max-w-[500px] mx-auto md:max-w-none">
                             {SITE_CONTENT.me.description}
                         </p>
